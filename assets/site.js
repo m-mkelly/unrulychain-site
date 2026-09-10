@@ -29,4 +29,52 @@
   }), { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+  // Newsletter subscribe
+  document.querySelectorAll('form.subscribe').forEach(form => {
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const input = form.querySelector('input[name="email"]');
+      const btn = form.querySelector('button');
+      const email = input.value.trim();
+      if (!email) return;
+
+      btn.disabled = true;
+      btn.textContent = 'Sending\u2026';
+
+      // Remove any previous message
+      const prev = form.querySelector('.subscribe-msg');
+      if (prev) prev.remove();
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        const data = await res.json();
+
+        const msg = document.createElement('p');
+        msg.className = 'subscribe-msg';
+
+        if (res.ok) {
+          msg.classList.add('subscribe-ok');
+          msg.textContent = data.message || 'Subscribed.';
+          input.value = '';
+        } else {
+          msg.classList.add('subscribe-err');
+          msg.textContent = data.error || 'Something went wrong.';
+        }
+        form.appendChild(msg);
+      } catch {
+        const msg = document.createElement('p');
+        msg.className = 'subscribe-msg subscribe-err';
+        msg.textContent = 'Could not connect. Try again.';
+        form.appendChild(msg);
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Subscribe';
+    });
+  });
 })();

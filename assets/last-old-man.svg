@@ -1,8 +1,0 @@
-<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract mid-century illustration of a solitary figure under a large moon">
-<rect width="900" height="480" fill="#173127"/>
-<circle cx="650" cy="170" r="132" fill="#e7dcc6"/>
-<circle cx="650" cy="170" r="92" fill="#b33d2d" opacity=".2"/>
-<path d="M0 410L120 302L212 356L333 260L462 355L595 290L720 354L900 280V480H0Z" fill="#171714"/>
-<path d="M0 444L140 375L235 418L350 345L495 427L620 365L770 425L900 360V480H0Z" fill="#e7dcc6" opacity=".35"/>
-<rect x="480" y="285" width="20" height="92" rx="8" fill="#efe6d2"/><circle cx="490" cy="268" r="14" fill="#efe6d2"/>
-</svg>

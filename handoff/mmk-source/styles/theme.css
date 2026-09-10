@@ -1,0 +1,290 @@
+/**
+ * Refined Design System: High-End Executive Coaching
+ * Inspired by editorial luxury: Kinfolk, Cereal, high-end consultancy
+ * Stark contrast, warm neutrals, green as ultra-subtle accent only
+ */
+
+:root {
+  /* Green is the primary brand color — drives all Optics primary tokens */
+  --op-color-primary-h: 130;
+  --op-color-primary-s: 25%;
+  --op-color-primary-l: 36%;
+
+  /* Warm tan is the neutral — drives all Optics neutral tokens */
+  --op-color-neutral-h: 40;
+  --op-color-neutral-s: 25%;  /* Higher saturation = visibly warm cream at high lightness */
+  --op-color-neutral-l: 96%;  /* Reference only — Optics scale uses fixed L steps */
+
+  /* Charcoal axis — cool blue-grey (H=220) not representable in the warm neutral scale.
+     Defined here as the canonical source; semantic aliases below reference these tokens. */
+  --op-color-charcoal-h: 220;
+  --op-color-charcoal-s: 12%;
+  --op-color-charcoal-base: hsl(var(--op-color-charcoal-h) var(--op-color-charcoal-s) 18%);
+  --op-color-charcoal-light: hsl(var(--op-color-charcoal-h) 8% 28%);
+
+  /* Brand accent aliases → Optics primary tokens (prefer --op-color-primary-* directly) */
+  --mm-accent-color: var(--op-color-primary-base);
+  --mm-color-text-accent: var(--op-color-primary-minus-one); /* Darker green for text-on-warm-bg contrast (≥4.5:1) */
+  --mm-accent-color-hover: var(--op-color-primary-minus-two);
+  --mm-accent-color-subtle: var(--op-color-primary-plus-six);
+  --mm-accent-color-line: var(--op-color-primary-plus-three);
+  --mm-accent-color-hero-border: var(--op-color-primary-plus-two);
+  --mm-accent-on-color: var(--op-color-primary-on-base);
+  --mm-accent-on-subtle: var(--op-color-primary-on-plus-six);
+
+  /* Nav toggle colors — Optics scale, distinct per dropdown */
+  --mm-color-internal-toggle: var(--op-color-neutral-base);
+  --mm-color-internal-toggle-hover: var(--op-color-neutral-minus-one);
+  --mm-color-calendar-toggle: var(--op-color-primary-minus-two);
+  --mm-color-calendar-toggle-hover: var(--op-color-primary-minus-three);
+
+  /* Refined color palette — all reference Optics or named axis tokens, no raw values */
+  --mm-color-logo-bg: var(--op-color-neutral-plus-seven);   /* 96% L warm cream — header bg */
+  --mm-color-charcoal: var(--op-color-charcoal-base);       /* H=220, 18% L — primary text/surfaces */
+  --mm-color-charcoal-light: var(--op-color-charcoal-light);/* H=220, 28% L — secondary text */
+  --mm-color-warm-white: var(--op-color-neutral-plus-eight); /* 98% L warm near-white — page bg */
+  --mm-color-warm-cream: var(--op-color-neutral-plus-six);  /* 94% L warm cream — accent surfaces */
+  --mm-color-stark-white: var(--op-color-neutral-plus-max); /* 100% L pure white */
+  --mm-color-stark-black: var(--op-color-neutral-minus-max);/* 0% L pure black */
+
+  /* Font families */
+  --mm-font-sans: var(--op-font-family);
+  --mm-font-serif: 'Libre Baskerville', serif;
+  --mm-font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+
+  /* Typography scale - refined editorial hierarchy */
+  --mm-font-display: clamp(3rem, 5vw + 1rem, 5.5rem);
+  --mm-font-headline: clamp(2.25rem, 3.5vw + 0.5rem, 4rem);
+  --mm-font-title: clamp(1.75rem, 2.5vw + 0.5rem, 3rem);
+
+  /* Body copy scale - consistent and scalable */
+  --mm-font-body-large: clamp(1.5rem, 1.5vw + 1rem, 1.75rem); /* 24px to 28px - for leads/subtitles */
+  --mm-font-body: clamp(1.125rem, 1.25vw + 0.8rem, 1.5rem);   /* 18px to 24px - consistent body text */
+
+  /* UI/Utility text — raw rem values (Optics --op-font-* assume 10px root; this project uses 16px) */
+  --mm-font-large:   1.75rem;   /* 28px */
+  --mm-font-medium:  1.5rem;    /* 24px */
+  /* DEPRECATED — do not use; all text uses --mm-font-body (18–24px clamp) */
+  --mm-font-small:   1.125rem;  /* 18px — deprecated */
+  --mm-font-x-small: 1rem;      /* 16px — deprecated */
+
+  /* Letter spacing - refined (no Optics equivalents — Optics has no negative tracking) */
+  --mm-letter-spacing-tight:  -0.03em;
+  --mm-letter-spacing-normal: -0.01em;
+  --mm-letter-spacing-wide:   0.02em;
+  --mm-letter-spacing-x-wide: 0.05em;
+
+  /* Line heights - generous, readable */
+  --mm-line-height-display:  1.05;
+  --mm-line-height-headline: 1.1;
+  --mm-line-height-title:    var(--op-line-height-denser); /* 1.15 */
+  --mm-line-height-body:     var(--op-line-height-loose);  /* 1.6  */
+  --mm-line-height-tight:    1.4;
+
+  /* Spacing scale — raw rem values (Optics --op-space-* assume 10px root; this project uses 16px) */
+  --mm-space-micro:    0.25rem;  /* 4px  */
+  --mm-space-tiny:     0.5rem;   /* 8px  */
+  --mm-space-small:    1rem;     /* 16px */
+  --mm-space-medium:   1.5rem;   /* 24px */
+  --mm-space-large:    2.5rem;   /* 40px */
+  --mm-space-x-large:  4rem;
+  --mm-space-2x-large: 6rem;
+  --mm-space-3x-large: 8rem;
+  --mm-space-4x-large: 10rem;
+
+  /* Layout */
+  --mm-content-max-width: var(--op-breakpoint-x-large);
+  --mm-content-padding: var(--mm-space-large);
+  --mm-readable-measure: 48ch;
+  --mm-wide-measure: 65ch;
+  --mm-sidebar-width: 14rem;
+
+  /* Accent line — aliases to Optics border-width tokens */
+  --mm-accent-line-width: var(--op-border-width);          /* 1px - ultra-thin */
+  --mm-accent-line-width-medium: var(--op-border-width-large);   /* 2px - for emphasis */
+  --mm-accent-line-width-heavy: 3px;                              /* 3px - scroll-hint hover, guide accent */
+  --mm-accent-line-width-large: var(--op-border-width-x-large);  /* 4px - for prominent borders */
+  --mm-divider-width: var(--op-border-width);               /* 1px */
+
+  /* Dividers — mapped to Optics neutral scale */
+  --mm-divider-color: var(--op-color-neutral-plus-four);
+  --mm-divider-color-subtle: var(--op-color-neutral-plus-five);
+
+  /* Transitions - refined, subtle */
+  --mm-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --mm-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --mm-transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --mm-transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1); /* overshoot spring */
+
+  /* Hero Specific Tokens - Editorial Consistency */
+  --mm-hero-padding-block: var(--mm-space-4x-large);
+  --mm-hero-grid-gap: var(--mm-space-3x-large);
+  --mm-hero-column-ratio: 1.6fr 1fr;
+  --mm-hero-eyebrow-spacing: var(--mm-space-medium);
+  --mm-hero-subtitle-measure: 45ch;
+  --mm-hero-divider-color: var(--mm-divider-color);
+
+  /* Grid column ratios — named by layout purpose, not by fr values */
+  --mm-grid-home-index: 1fr 2fr;               /* How-we-help: sticky aside + wide content list */
+  --mm-grid-editorial: 1fr 1.5fr;              /* Shared editorial 2-col: narrow label + body */
+  --mm-grid-editorial-reverse: 1.5fr 1fr;     /* Editorial reversed: wide content + narrow aside */
+  --mm-grid-privacy: 1fr 2.5fr;               /* Privacy: narrow sticky header + wide body */
+  --mm-grid-footer: 1.5fr 1fr 1fr;            /* Footer: wider brand col + two equal nav cols */
+
+  /* Shadows - minimal, refined */
+  --mm-shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --mm-shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+  /* Border radius - sharp, architectural */
+  --mm-radius-none: 0;
+  --mm-radius-subtle: 0.125rem;
+
+  /* Component tokens */
+  --mm-min-touch-target: 2.75rem;   /* 44px — WCAG minimum interactive target */
+  --mm-text-underline-offset: 0.2em;
+
+  /* Focus / outline — derived from Optics border-width scale */
+  --mm-outline-width: var(--op-border-width-large);  /* 2px */
+  --mm-outline-offset: var(--mm-space-micro);        /* 0.25rem */
+
+  /* Tagline width — header, footer, brand page */
+  --mm-tagline-width: 18ch;
+
+  /* Hamburger icon geometry */
+  --mm-hamburger-icon-width: 1.5rem;
+  --mm-hamburger-icon-bar-height: var(--op-border-width-large);  /* 2px bar lines */
+  --mm-hamburger-icon-offset: calc(var(--mm-space-micro) * 1.6); /* ~0.4rem between bars */
+
+  /* Editorial image filter — grayscale B&W treatment */
+  --mm-filter-editorial: grayscale(100%) contrast(1.15) brightness(0.9);
+
+  /* Inline icon size — for icons sized relative to surrounding text */
+  --mm-font-icon-inline: 1.1em;
+
+  /* Image overlay — charcoal tint for editorial image containers */
+  --mm-color-img-overlay: color-mix(in srgb, var(--mm-color-charcoal) 5%, transparent);
+
+  /* 404 display number */
+  --mm-font-404: clamp(8rem, 20vw, 18rem);
+
+  /* Layout */
+  --mm-header-height: 9rem;         /* 144px — matches .site-header__nav */
+  --mm-scroll-offset: calc(var(--mm-header-height) + var(--mm-space-large)); /* anchor scroll clearance */
+  --mm-logo-size: 6.25rem;          /* 100px — logo square on desktop */
+  --mm-logo-max-size: 7.8rem;       /* Logo max-block-size */
+  --mm-logo-size-mobile: 4.5rem;    /* Logo size on mobile */
+
+  /* Typography — UI & icon sizes */
+  --mm-font-icon-toggle: 1.25rem;
+  --mm-font-icon-accordion: 1.5rem;
+  --mm-font-icon-card: 2rem;
+  --mm-font-icon-card-large: 2.5rem;
+  --mm-eyebrow-accent-width: 1rem;
+
+  /* Line heights */
+  --mm-line-height-ui: 1.2;         /* Buttons and compact UI elements */
+  --mm-line-height-snug: 1;         /* Display numbers, tight lockups */
+
+  /* Interactive component sizing */
+  --mm-btn-min-height: 3rem;
+
+  /* Content layout sizing */
+  --mm-card-min-width: 20rem;
+  --mm-service-image-min-height: 25rem;
+  --mm-deliverables-max-height: 31.25rem;  /* 500px accordion open state */
+  --mm-swatch-min-width: 12rem;
+  --mm-btn-sample-min-width: 15rem;
+  --mm-toggle-sample-max-width: 20rem;
+  --mm-animation-entrance-duration: 600ms;                /* section/article scroll-entrance timing */
+  --mm-animation-entrance-easing: cubic-bezier(0.2, 0.8, 0.2, 1); /* decelerate entrance curve */
+  --mm-animation-scroll-hint-duration: 2s;               /* scroll-hint-bounce loop timing */
+  --mm-animation-scroll-hint-easing: ease-in-out;        /* scroll-hint-bounce easing */
+  --mm-animation-slide-offset: 2rem;
+  --mm-animation-mosaic-duration: 0.8s;
+  --mm-animation-mosaic-spread: 0.4s;  /* Total delay window for mosaic stagger */
+  --mm-animation-item-stagger: 150ms;     /* per-item cascade delay for scroll-entrance staggers */
+  --mm-animation-stagger-duration: 600ms; /* per-item entrance animation length */
+  --mm-animation-arrow-nudge: 4px;        /* link arrow hover translateX offset */
+  --mm-animation-press-duration: 50ms;    /* tactile button press transition speed */
+  --mm-animation-press-scale: 0.98;       /* button active press scale */
+  --mm-animation-scroll-press-scale: 0.95; /* scroll button active press scale */
+  --mm-animation-icon-hover-scale: 1.2;    /* icon grow scale on button hover */
+  --mm-animation-label-lift: 2px;          /* nav label spring lift on hover */
+  --mm-animation-number-hover-scale: 2;    /* service card number scale on card hover */
+  --mm-animation-icon-hover-rotate: 12deg; /* accent card icon spring rotation on hover */
+  --mm-animation-logo-hover-rotate: -2deg; /* logo subtle spring rotation on hover */
+  --mm-animation-tile-hover-scale: 1.04;   /* mosaic tile grow on hover */
+
+  /* Opacity scale */
+  --mm-opacity-hover-overlay: 0.05;
+  --mm-opacity-ghost: 0.4;
+  --mm-opacity-muted: 0.5;
+  --mm-opacity-dim: 0.6;
+  --mm-opacity-subdued: 0.7;
+  --mm-opacity-near-full: 0.9;
+
+  /* Z-index — local stacking context within components */
+  --mm-z-index-base: 0;
+  --mm-z-index-raised: 1;
+
+  /* === SEVERITY PALETTE (approved Phase 3 design review) === */
+  --sev-green-border: hsl(130, 30%, 36%);
+  --sev-green-text: hsl(130, 30%, 26%);
+  --sev-green-tint: hsla(130, 30%, 36%, 0.12);
+  --sev-amber-border: hsl(38, 55%, 45%);
+  --sev-amber-text: hsl(38, 50%, 28%);
+  --sev-amber-tint: hsla(38, 55%, 45%, 0.15);
+  --sev-terra-border: hsl(15, 45%, 40%);
+  --sev-terra-text: hsl(15, 40%, 28%);
+  --sev-terra-tint: hsla(15, 45%, 40%, 0.15);
+  --sev-pill-bg: hsl(40, 20%, 94%);
+
+  /* === STAGE COLOR PROGRESSION (approved Phase 3 design review) === */
+  --stage-arrived-bg: hsl(15, 40%, 95%);
+  --stage-arrived-border: hsl(15, 45%, 40%);
+  --stage-arrived-dot: hsl(15, 45%, 40%);
+  --stage-arrived-text: hsl(15, 40%, 25%);
+  --stage-author-bg: hsl(38, 45%, 94%);
+  --stage-author-border: hsl(38, 55%, 45%);
+  --stage-author-dot: hsl(38, 55%, 45%);
+  --stage-author-text: hsl(38, 50%, 25%);
+  --stage-gate-bg: hsl(90, 25%, 93%);
+  --stage-gate-border: hsl(90, 30%, 40%);
+  --stage-gate-dot: hsl(90, 30%, 40%);
+  --stage-gate-text: hsl(90, 30%, 25%);
+  --stage-final-bg: hsl(130, 25%, 93%);
+  --stage-final-border: hsl(130, 30%, 36%);
+  --stage-final-dot: hsl(130, 30%, 36%);
+  --stage-final-text: hsl(130, 30%, 25%);
+  --stage-completed: hsl(130, 30%, 36%);
+  --stage-future: hsl(40, 10%, 80%);
+
+  /* === COMMENT HIGHLIGHTS (approved Phase 3 design review) === */
+  --comment-underline: hsl(220, 12%, 40%);
+  --comment-marker-bg: hsl(220, 12%, 40%);
+  --comment-marker-text: hsl(0, 0%, 100%);
+
+  /* === ERROR (terra cotta axis, not red) === */
+  --mm-color-error: hsl(15, 45%, 40%);
+  --mm-color-error-text: hsl(15, 40%, 28%);
+  --mm-color-error-bg: hsl(15, 40%, 95%);
+
+  /* === DATA INDICATORS (positive/negative for charts, deltas, metrics) === */
+  --mm-color-positive: hsl(130, 30%, 32%);
+  --mm-color-negative: var(--mm-color-error);
+
+  /* Footer borders — white-on-dark overlays */
+  --mm-footer-border-subtle: rgba(255, 255, 255, 0.05);
+  --mm-footer-border-mid: rgba(255, 255, 255, 0.1);
+  --mm-footer-border-strong: rgba(255, 255, 255, 0.3);
+
+  /* Animation offsets */
+  --mm-scroll-hint-offset: 8px;         /* bounce travel distance for scroll-hint indicator */
+  --mm-tile-entrance-scale: 0.95;       /* mosaic tile entrance animation scale */
+  --mm-tile-entrance-lift: 1.5rem;      /* mosaic tile entrance animation translateY */
+
+  /* Layout constraints */
+  --mm-login-max-width: 32rem;          /* max-inline-size for login form container */
+  --mm-calendly-min-height: 660px;      /* Calendly embed minimum block size */
+  --mm-cookie-consent-min-width: 280px; /* Cookie consent text min-inline-size for wrapping */
+}

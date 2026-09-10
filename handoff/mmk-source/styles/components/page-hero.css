@@ -1,0 +1,63 @@
+/* page-hero — most styling via shared classes in components.css. */
+
+page-hero .eyebrow {
+  margin-block-end: var(--mm-hero-eyebrow-spacing);
+}
+
+@keyframes scroll-hint-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50%       { transform: translateY(var(--mm-scroll-hint-offset)); opacity: 0.9; }
+}
+
+.page-hero__scroll-hint {
+  display: none;
+  margin-block-start: var(--mm-space-x-large);
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.page-hero__scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: var(--mm-space-medium);
+  cursor: pointer;
+  color: var(--mm-accent-color-line);
+  font-size: var(--mm-font-title);
+  box-shadow: inset 0 0 0 var(--mm-accent-line-width-medium) var(--mm-accent-color-line);
+  transition: box-shadow var(--mm-transition-base), color var(--mm-transition-base), transform var(--mm-transition-base);
+
+  &:hover {
+    box-shadow: inset 0 0 0 var(--mm-accent-line-width-heavy) var(--mm-accent-color);
+    color: var(--mm-accent-color);
+  }
+
+  &:active {
+    transform: scale(var(--mm-animation-scroll-press-scale));
+    transition-duration: var(--mm-animation-press-duration);
+  }
+}
+
+.page-hero__scroll-btn i {
+  animation: scroll-hint-bounce var(--mm-animation-scroll-hint-duration) var(--mm-animation-scroll-hint-easing) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-hero__scroll-btn i {
+    animation: none;
+  }
+}
+
+.page-hero__signature {
+  font-family: var(--mm-font-serif);
+  font-size: var(--mm-font-headline);
+  font-weight: var(--op-font-weight-medium);
+  font-style: italic;
+  color: var(--mm-color-charcoal);
+  line-height: var(--mm-line-height-snug);
+  margin-block-end: var(--mm-space-large);
+}

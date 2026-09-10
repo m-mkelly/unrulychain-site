@@ -1,0 +1,15 @@
+/* Card Grid Section – responsive grid for card children */
+
+.card-grid-section__grid {
+  display: grid;
+  gap: var(--mm-space-4x-large) var(--mm-space-3x-large);
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

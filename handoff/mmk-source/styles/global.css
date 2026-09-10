@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: auto;
+}
+
+body.scroll-locked {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: var(--mm-color-warm-white);
+  color: var(--mm-color-charcoal);
+  font-family: var(--op-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mm-color-charcoal);
+  margin-block-start: 0;
+  font-family: var(--mm-font-serif);
+  text-wrap: balance;
+}
+
+a {
+  color: var(--mm-color-charcoal);
+  text-decoration: none;
+  transition: color var(--mm-transition-base);
+}
+
+a:hover {
+  color: var(--mm-accent-color);
+  text-decoration: underline;
+  text-decoration-color: var(--mm-accent-color-line);
+  text-underline-offset: var(--mm-text-underline-offset);
+}
+
+/* For icon links: the underline is drawn under the whole <a> box, which includes the icon glyph.
+   Suppress it at the link level and re-apply only to the <span> text child. */
+a:has(> i):hover {
+  text-decoration: none;
+}
+
+a:has(> i):hover > span {
+  text-decoration: underline;
+  text-decoration-color: var(--mm-accent-color-line);
+  text-underline-offset: var(--mm-text-underline-offset);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: var(--mm-outline-width) solid var(--mm-accent-color);
+  outline-offset: var(--mm-outline-offset);
+}
+
+/* Suppress focus ring on programmatically focused landmark elements (SPA route changes) */
+main:focus {
+  outline: none;
+}
+
+/* Skip-to-content link — visible on keyboard focus only */
+.skip-to-content {
+  position: absolute;
+  top: 0;
+  left: var(--mm-content-padding);
+  transform: translateY(calc(var(--mm-header-height) * -2));
+  background-color: var(--mm-color-charcoal);
+  color: var(--mm-color-stark-white);
+  padding: var(--op-space-small) var(--op-space-medium);
+  font-size: var(--mm-font-body);
+  font-weight: var(--op-font-weight-bold);
+  text-decoration: none;
+  z-index: var(--op-z-index-dialog);
+  transition: transform var(--mm-transition-fast), background-color var(--mm-transition-fast);
+}
+
+.skip-to-content:focus {
+  transform: translateY(var(--op-space-small));
+  outline: none;
+}
+
+.skip-to-content:hover {
+  background-color: var(--mm-color-charcoal-light);
+  color: var(--mm-color-stark-white);
+  text-decoration: none;
+}
+
+/* Section and article entrance animations — triggered by IntersectionObserver in AppShell.ts */
+main section,
+main section article,
+main section .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(var(--mm-animation-slide-offset));
+  transition: opacity var(--mm-animation-entrance-duration) var(--mm-animation-entrance-easing),
+              transform var(--mm-animation-entrance-duration) var(--mm-animation-entrance-easing);
+  transition-delay: var(--section-delay, 0s);
+}
+
+main section.is-visible,
+main section article.is-visible,
+main section .animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main section,
+  main section article,
+  main section .animate-on-scroll {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Sections whose children stagger individually: bypass the section-level fade */
+main section.page-section--stagger {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* Image Utility Classes (Editorial Style) */
+.img-editorial {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; /* Strict sharp corners */
+  filter: var(--mm-filter-editorial); /* Editorial B&W feel */
+  background-color: var(--mm-color-charcoal-light); /* Placeholder background */
+  transition: filter var(--mm-transition-base);
+}
+
+/* Container for images to ensure consistent aspect ratios and sharp borders */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border: var(--mm-divider-width) solid var(--mm-color-charcoal);
+  background-color: var(--mm-color-charcoal-light);
+}
+
+.img-container--vertical {
+  aspect-ratio: 3 / 4;
+}
+
+.img-container--horizontal {
+  aspect-ratio: 16 / 9;
+}
+
+.img-container--square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Subtle image overlay for an elegant tint */
+.img-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--mm-color-img-overlay); /* Very subtle charcoal tint */
+  pointer-events: none;
+}

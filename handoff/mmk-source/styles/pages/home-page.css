@@ -1,0 +1,178 @@
+/* Using the new unified design system tokens from theme.css */
+
+.home-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page__hero-image {
+  width: 100%;
+  margin-block-start: var(--mm-space-large);
+}
+
+.home-page__challenge-image {
+  width: 100%;
+  margin-block-start: var(--mm-space-2x-large);
+}
+
+/* Pain list - refined to thin borders */
+.home-page__pain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page__pain-item {
+  padding-block: var(--mm-space-medium);
+  border-block-end: var(--mm-divider-width) solid var(--mm-divider-color);
+  font-size: var(--mm-font-body);
+  line-height: var(--mm-line-height-body);
+  color: var(--mm-color-charcoal-light);
+
+  &:first-child {
+    border-block-start: var(--mm-divider-width) solid var(--mm-divider-color);
+  }
+}
+
+/* How we help section - Clean Editorial Index */
+.home-page__index-grid {
+  display: grid;
+  gap: var(--mm-space-4x-large);
+  grid-template-columns: 1fr;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: var(--mm-grid-home-index); /* Asymmetrical spread */
+    gap: var(--mm-space-4x-large);
+    align-items: start;
+  }
+}
+
+.home-page__index-aside {
+  @media (min-width: 1024px) {
+    position: sticky;
+    top: calc(var(--mm-header-height) + var(--mm-space-2x-large));
+  }
+}
+
+.home-page__index-image {
+  margin-block-start: var(--mm-space-2x-large);
+  width: 100%;
+}
+
+.home-page__index-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page__index-item {
+  display: flex;
+  gap: var(--mm-space-large);
+  padding-block: var(--mm-space-2x-large);
+  border-block-start: var(--mm-divider-width) solid var(--mm-divider-color);
+
+  &:first-child {
+    padding-block-start: 0;
+    border-block-start: none;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: var(--mm-space-small);
+  }
+}
+
+.home-page__service-number {
+  font-size: var(--mm-font-body-large);
+  font-weight: var(--op-font-weight-bold);
+  color: var(--mm-color-text-accent);
+  font-family: var(--mm-font-sans);
+  line-height: var(--mm-line-height-tight);
+}
+
+.home-page__index-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mm-space-small);
+  flex: 1;
+}
+
+/* Links */
+.home-page__link {
+  color: var(--mm-color-charcoal);
+  text-decoration: none;
+  border-block-end: var(--mm-accent-line-width) solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mm-space-tiny);
+  font-weight: var(--op-font-weight-semi-bold);
+  align-self: flex-start;
+  margin-block-start: auto;
+}
+
+.home-page__link--accent {
+  color: var(--mm-color-charcoal);
+  font-weight: var(--op-font-weight-bold);
+  letter-spacing: var(--mm-letter-spacing-normal);
+  font-size: var(--mm-font-body);
+}
+
+/* Approach icons — index layout with icons */
+.home-page__approach-icon {
+  display: block;
+  font-size: var(--mm-font-icon-card-large);
+  color: var(--mm-accent-color);
+  line-height: var(--mm-line-height-title);
+}
+
+/* -----------------------------------------------------------------------------
+   Stagger cascade — pain list items and index items animate in individually
+   ----------------------------------------------------------------------------- */
+
+@keyframes mm-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--mm-animation-slide-offset));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-page__pain-item,
+.home-page__index-item {
+  opacity: 0;
+  animation: mm-fade-in var(--mm-animation-stagger-duration) cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--index, 0) * var(--mm-animation-item-stagger));
+  animation-play-state: paused;
+}
+
+.is-visible .home-page__pain-item,
+.is-visible .home-page__index-item {
+  animation-play-state: running;
+}
+
+/* Links — arrow micro-interaction */
+.home-page__link i {
+  transition: transform var(--mm-transition-base);
+}
+
+.home-page__link:hover i {
+  transform: translateX(var(--mm-animation-arrow-nudge));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page__pain-item,
+  .home-page__index-item {
+    animation: none;
+    opacity: 1;
+  }
+
+  .home-page__link i {
+    transition: none;
+  }
+}

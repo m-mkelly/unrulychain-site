@@ -1,0 +1,31 @@
+meta:
+  type: aim-domain
+  app: unrulychain-site
+  domain: site-structure
+  updated: 2026-09-10
+
+triples:
+  - subject: "tech stack"
+    predicate: "is"
+    object: "plain HTML, CSS, minimal JavaScript. No framework, no build step, no dependencies"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "IPFS compatibility"
+    predicate: "requires"
+    object: "self-contained static bundle, relative paths, bundled fonts"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "current repo contents"
+    predicate: "are"
+    object: "README.md and a placeholder index.html (dark background, centered 'UNRULY CHAIN' in Georgia)"
+    context: "repo:main, 2026-09-10"
+
+  - subject: "ChatGPT bundle (not approved)"
+    predicate: "contains"
+    object: "6 HTML pages (index, centrifuge, about, author, press, privacy), assets/styles.css, assets/site.js, assets/hero.svg, assets/last-old-man.svg"
+    context: "session-handoff-2026-09-10"
+
+  - subject: "ChatGPT bundle"
+    predicate: "status"
+    object: "NOT approved. Mitch has not visually reviewed it. Produced by ChatGPT"
+    context: "session-handoff-2026-09-10"

@@ -1,0 +1,71 @@
+meta:
+  type: aim-domain
+  app: unrulychain-site
+  domain: infrastructure
+  updated: 2026-09-10
+
+triples:
+  - subject: "unrulychain-site"
+    predicate: "hosted on"
+    object: "Cloudflare Pages (free tier, unmetered bandwidth)"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "unrulychain-site"
+    predicate: "production URL"
+    object: "https://unrulychain.com"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "unrulychain-site"
+    predicate: "preview URL"
+    object: "unrulychain-site.pages.dev"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "GitHub repo"
+    predicate: "is"
+    object: "m-mkelly/unrulychain-site (public, m-mkelly org, mitch-f-kelly account)"
+    context: "infrastructure-handoff"
+
+  - subject: "deploy trigger"
+    predicate: "is"
+    object: "auto-deploy on push to main branch"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "Cloudflare Pages project"
+    predicate: "named"
+    object: "unrulychain-site"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "Cloudflare Pages"
+    predicate: "requires"
+    object: "legacy Pages workflow (Continue to Pages link at bottom of Create application screen)"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "Cloudflare Pages"
+    predicate: "framework preset"
+    object: "None. Build command: blank. Build output directory: blank (serves repo root)"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "domain registrar"
+    predicate: "is"
+    object: "Squarespace (misael.mitch.fernandez@gmail.com)"
+    context: "infrastructure-handoff"
+
+  - subject: "DNS"
+    predicate: "managed by"
+    object: "Cloudflare (angela.ns.cloudflare.com, cash.ns.cloudflare.com)"
+    context: "infrastructure-handoff"
+
+  - subject: "Cloudflare account"
+    predicate: "is"
+    object: "mitch.fernandez.kelly@gmail.com"
+    context: "infrastructure-handoff"
+
+  - subject: "GitHub auth for Cloudflare"
+    predicate: "uses"
+    object: "mitch-f-kelly account, m-mkelly org selected"
+    context: "infrastructure-handoff"
+
+  - subject: "custom domain activation"
+    predicate: "is"
+    object: "automatic when domain DNS is already on the same Cloudflare account"
+    context: "unruly-chain-imprint.md#website"

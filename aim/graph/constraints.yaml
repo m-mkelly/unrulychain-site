@@ -1,0 +1,66 @@
+meta:
+  type: aim-domain
+  app: unrulychain-site
+  domain: constraints
+  updated: 2026-09-10
+
+triples:
+  - subject: "commits to main"
+    predicate: "require"
+    object: "safety word 'sea cucumber' from Mitch in the same conversation turn"
+    context: "deployment safety protocol"
+
+  - subject: "PR merges"
+    predicate: "require"
+    object: "safety word 'sea cucumber' from Mitch in the same conversation turn"
+    context: "deployment safety protocol"
+
+  - subject: "Unruly Chain brand"
+    predicate: "must not be reinterpreted as"
+    object: "an AI-specific brand, a science-only publisher, or a consulting-company brand"
+    context: "unruly-chain-imprint.md#why-unruly-chain"
+
+  - subject: "visual design"
+    predicate: "must never include"
+    object: "robots, brains, circuits, glowing AI heads, neural-network cliches, or generic AI-generated sci-fi imagery"
+    context: "unruly-chain-imprint.md#book-visual-identity"
+
+  - subject: "copy"
+    predicate: "must never use"
+    object: "em dashes. Restructure sentences entirely"
+    context: "project instructions"
+
+  - subject: "architecture"
+    predicate: "must not introduce"
+    object: "frameworks, build steps, or external dependencies"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "ChatGPT prose documents"
+    predicate: "are"
+    object: "context, not authoritative sources. Aim triples must trace to KB documents or Mitch's explicit direction"
+    context: "session-handoff-2026-09-10"
+
+  - subject: "PREDICT lifecycle"
+    predicate: "is"
+    object: "not in scope for this site"
+    context: "infrastructure-handoff"
+
+  - subject: "Asana project"
+    predicate: "is"
+    object: "not directed for this site"
+    context: "infrastructure-handoff"
+
+  - subject: "cover art integration"
+    predicate: "is"
+    object: "swap when delivered, not a build blocker"
+    context: "infrastructure-handoff"
+
+  - subject: "IPFS publication"
+    predicate: "is"
+    object: "a separate effort, not part of the website build"
+    context: "infrastructure-handoff"
+
+  - subject: "design decisions"
+    predicate: "are made by"
+    object: "ChatGPT (design implementation authority). Claude assists with review, repo, deployment, and technical QA"
+    context: "infrastructure-handoff"

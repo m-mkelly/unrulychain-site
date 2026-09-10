@@ -19,8 +19,14 @@
     window.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
     window.addEventListener('resize', () => { if (window.innerWidth > 760) close(); });
   }
+
+  // Scroll-triggered reveal with stagger support
   const io = new IntersectionObserver(entries => entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), {threshold: .08});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  }), { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
 })();

@@ -56,6 +56,8 @@
 
         const msg = document.createElement('p');
         msg.className = 'subscribe-msg';
+        msg.setAttribute('role', 'status');
+        msg.setAttribute('aria-live', 'polite');
 
         if (res.ok) {
           msg.classList.add('subscribe-ok');
@@ -69,6 +71,8 @@
       } catch {
         const msg = document.createElement('p');
         msg.className = 'subscribe-msg subscribe-err';
+        msg.setAttribute('role', 'status');
+        msg.setAttribute('aria-live', 'polite');
         msg.textContent = 'Could not connect. Try again.';
         form.appendChild(msg);
       }

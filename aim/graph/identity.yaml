@@ -1,0 +1,76 @@
+meta:
+  type: aim-domain
+  app: unrulychain-site
+  domain: identity
+  updated: 2026-09-10
+
+triples:
+  - subject: "Unruly Chain"
+    predicate: "is"
+    object: "the publishing imprint under which Mitch Kelly's books are published"
+    context: "unruly-chain-imprint.md#what-it-is"
+
+  - subject: "Unruly Chain"
+    predicate: "is not"
+    object: "a separate legal entity. M&M Kelly LLC is the underlying business"
+    context: "unruly-chain-imprint.md#what-it-is"
+
+  - subject: "Unruly Chain"
+    predicate: "functions as"
+    object: "a durable umbrella rather than a brand designed around either title"
+    context: "unruly-chain-imprint.md#what-it-is"
+
+  - subject: "consumer-facing brand"
+    predicate: "is"
+    object: "UNRULY CHAIN (not 'Unruly Chain Press')"
+    context: "unruly-chain-imprint.md#logo"
+
+  - subject: "'Press'"
+    predicate: "used only in"
+    object: "metadata, legal, and publishing contexts, never in the consumer-facing brand"
+    context: "unruly-chain-imprint.md#logo"
+
+  - subject: "first planned title"
+    predicate: "is"
+    object: "Centrifuge: Inside the Emerging AI Organization"
+    context: "unruly-chain-imprint.md#what-it-is"
+
+  - subject: "second planned title"
+    predicate: "is"
+    object: "Last Old Man"
+    context: "Mitch direction, 2026-09-10"
+
+  - subject: "name meaning"
+    predicate: "includes"
+    object: "a chain of causation that does not behave predictably; systems becoming emergent or escaping control"
+    context: "unruly-chain-imprint.md#why-unruly-chain"
+
+  - subject: "name meaning"
+    predicate: "also includes"
+    object: "actors breaking established institutional chains; decentralization; independence from conventional authority"
+    context: "unruly-chain-imprint.md#why-unruly-chain"
+
+  - subject: "name meaning"
+    predicate: "also includes"
+    object: "the consequences of capabilities escaping the institutions that historically controlled them"
+    context: "unruly-chain-imprint.md#why-unruly-chain"
+
+  - subject: "naming rationale"
+    predicate: "rejected"
+    object: "conventional independent-press names for sounding overly academic, respectable, generic, or like vanity publishers"
+    context: "unruly-chain-imprint.md#why-unruly-chain"
+
+  - subject: "desired identity"
+    predicate: "is"
+    object: "intellectually independent, somewhat insurgent, willing to challenge institutional assumptions, but not juvenile or performatively rebellious"
+    context: "unruly-chain-imprint.md#why-unruly-chain"
+
+  - subject: "Substack"
+    predicate: "is"
+    object: "mitchkelly.substack.com, publication name 'Unreasonable Man', account email mitch@mandmkelly.com"
+    context: "infrastructure-handoff"
+
+  - subject: "author"
+    predicate: "is"
+    object: "Mitch Kelly"
+    context: "unruly-chain-imprint.md#implementation-plan"

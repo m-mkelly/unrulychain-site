@@ -1,0 +1,76 @@
+meta:
+  type: aim-domain
+  app: unrulychain-site
+  domain: design-direction
+  updated: 2026-09-10
+
+triples:
+  - subject: "series-level visual direction"
+    predicate: "is"
+    object: "mid-century scientific surrealism / scientific editorial design"
+    context: "unruly-chain-imprint.md#book-visual-identity"
+
+  - subject: "visual direction"
+    predicate: "combines"
+    object: "1950s/60s scientific-journal imagery; Saul Bass-era conceptual poster simplicity; large negative space"
+    context: "unruly-chain-imprint.md#book-visual-identity"
+
+  - subject: "visual direction"
+    predicate: "also combines"
+    object: "flat or nearly flat geometric/scientific forms; restrained palettes; print/halftone/aged-paper texture"
+    context: "unruly-chain-imprint.md#book-visual-identity"
+
+  - subject: "visual direction"
+    predicate: "depicts"
+    object: "mysterious scientific or technological phenomena rather than literal AI imagery"
+    context: "unruly-chain-imprint.md#book-visual-identity"
+
+  - subject: "recurring visual device"
+    predicate: "is"
+    object: "a stylized representation of Mitch as a dark silhouette with unusually long gray/white beard and large mustache"
+    context: "unruly-chain-imprint.md#book-visual-identity"
+
+  - subject: "author silhouette"
+    predicate: "changes"
+    object: "pose from book to book, becoming a recurring character rather than a repeated logo"
+    context: "unruly-chain-imprint.md#book-visual-identity"
+
+  - subject: "relationship to mandmkelly.com"
+    predicate: "is"
+    object: "both sites should feel familiar to each other in design and navigation, not an imitation, but feeling like they come from the same hand"
+    context: "infrastructure-handoff"
+
+  - subject: "site visual identity"
+    predicate: "is"
+    object: "rooted in the mid-century scientific surrealism direction, distinct from mandmkelly.com"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "cover design authority"
+    predicate: "is"
+    object: "Dallas Peters (contracted September 2026)"
+    context: "unruly-chain-imprint.md#cover-design"
+
+  - subject: "Dallas Peters"
+    predicate: "establishes"
+    object: "the definitive palette once cover art is delivered"
+    context: "unruly-chain-imprint.md#website"
+
+  - subject: "creative direction"
+    predicate: "is"
+    object: "Concept D: scientific surrealism vortex/dissolution style, textured graphic mid-century screen-print aesthetic"
+    context: "unruly-chain-imprint.md#cover-design"
+
+  - subject: "logo current concept"
+    predicate: "is"
+    object: "radically simplified fist gripping and snapping a horizontal chain, distressed mid-century/woodcut/screen-print style, widely spaced uppercase UNRULY CHAIN beneath"
+    context: "unruly-chain-imprint.md#logo"
+
+  - subject: "logo"
+    predicate: "must work first as"
+    object: "a publisher's spine mark (recognizable at 10 to 15 mm)"
+    context: "unruly-chain-imprint.md#logo"
+
+  - subject: "design implementation authority"
+    predicate: "is"
+    object: "ChatGPT (design collaboration partner)"
+    context: "infrastructure-handoff"

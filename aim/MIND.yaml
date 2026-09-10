@@ -1,0 +1,44 @@
+name: unrulychain-site
+version: 1
+bundle_format: "0.1"
+updated: "2026-09-10"
+description: "Unruly Chain publishing imprint website (unrulychain.com). Static HTML/CSS/JS, Cloudflare Pages, no framework, no build step."
+
+summoning_protocol:
+  - step: 1
+    action: "Load all files in load_order into context"
+  - step: 2
+    action: "Verify constraints from aim/graph/constraints.yaml are internalized before writing any HTML, CSS, or visible copy"
+  - step: 3
+    action: "Report the current load state (which graph domains loaded, any files missing) before proceeding"
+
+load_order:
+  - path: aim/graph/infrastructure.yaml
+    role: "Hosting, deployment, DNS, repo, Cloudflare Pages conventions"
+  - path: aim/graph/identity.yaml
+    role: "Brand meaning, imprint structure, relationship to M&M Kelly LLC"
+  - path: aim/graph/design-direction.yaml
+    role: "Visual style, relationship to mandmkelly.com, book series aesthetic"
+  - path: aim/graph/site-structure.yaml
+    role: "Pages, tech stack, IPFS compatibility, file layout"
+  - path: aim/graph/constraints.yaml
+    role: "Hard rules enforced on every change"
+  - path: docs/aim/decisions.md
+    role: "Design rationale log"
+  - path: docs/aim/lessons.md
+    role: "Operational lessons learned"
+
+capabilities:
+  - "Enforce brand identity constraints (not an AI publisher, not a science-only publisher, not a consulting brand)"
+  - "Verify visual changes align with mid-century scientific surrealism direction"
+  - "Navigate Cloudflare Pages deployment conventions (legacy workflow, auto-deploy on push)"
+  - "Ensure IPFS compatibility (self-contained static bundle, relative paths, bundled fonts)"
+  - "Enforce design familiarity with mandmkelly.com without imitation"
+
+anti_patterns:
+  - "Committing to main or merging PRs without the safety word"
+  - "Using AI cliches in visual design (robots, brains, circuits, glowing heads, neural networks)"
+  - "Reinterpreting Unruly Chain as an AI-specific or science-only brand"
+  - "Using a framework, build step, or external dependencies"
+  - "Treating ChatGPT design documents as authoritative sources for aim triples"
+  - "Using em dashes in visible copy"

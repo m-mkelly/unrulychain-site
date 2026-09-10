@@ -32,6 +32,7 @@
 
   // Newsletter subscribe
   document.querySelectorAll('form.subscribe').forEach(form => {
+    const status = form.querySelector('.subscribe-status');
     form.addEventListener('submit', async e => {
       e.preventDefault();
       const input = form.querySelector('input[name="email"]');
@@ -41,10 +42,7 @@
 
       btn.disabled = true;
       btn.textContent = 'Sending\u2026';
-
-      // Remove any previous message
-      const prev = form.querySelector('.subscribe-msg');
-      if (prev) prev.remove();
+      if (status) status.textContent = '';
 
       try {
         const res = await fetch('/api/subscribe', {
@@ -54,27 +52,22 @@
         });
         const data = await res.json();
 
-        const msg = document.createElement('p');
-        msg.className = 'subscribe-msg';
-        msg.setAttribute('role', 'status');
-        msg.setAttribute('aria-live', 'polite');
-
-        if (res.ok) {
-          msg.classList.add('subscribe-ok');
-          msg.textContent = data.message || 'Subscribed.';
-          input.value = '';
-        } else {
-          msg.classList.add('subscribe-err');
-          msg.textContent = data.error || 'Something went wrong.';
+        if (status) {
+          status.className = 'subscribe-status';
+          if (res.ok) {
+            status.classList.add('subscribe-ok');
+            status.textContent = data.message || 'Subscribed.';
+            input.value = '';
+          } else {
+            status.classList.add('subscribe-err');
+            status.textContent = data.error || 'Something went wrong.';
+          }
         }
-        form.appendChild(msg);
       } catch {
-        const msg = document.createElement('p');
-        msg.className = 'subscribe-msg subscribe-err';
-        msg.setAttribute('role', 'status');
-        msg.setAttribute('aria-live', 'polite');
-        msg.textContent = 'Could not connect. Try again.';
-        form.appendChild(msg);
+        if (status) {
+          status.className = 'subscribe-status subscribe-err';
+          status.textContent = 'Could not connect. Try again.';
+        }
       }
 
       btn.disabled = false;

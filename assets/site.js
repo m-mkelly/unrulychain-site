@@ -1,3 +1,27 @@
+// GA4 Analytics — Property 554102515, Stream 15776120947
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+
+  // Consent mode v2: analytics granted per privacy policy; ads denied
+  gtag('consent', 'default', {
+    analytics_storage: 'granted',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+
+  // Load gtag.js
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-D4FLE07ZYS';
+  document.head.appendChild(s);
+
+  gtag('js', new Date());
+  gtag('config', 'G-D4FLE07ZYS');
+})();
+
 (() => {
   const button = document.querySelector('.menu-button');
   const menu = document.querySelector('.mobile-nav');

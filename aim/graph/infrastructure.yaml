@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: infrastructure
-  updated: 2026-09-10
+  updated: 2026-09-19
 
 triples:
   - subject: "unrulychain-site"
@@ -69,3 +69,28 @@ triples:
     predicate: "is"
     object: "automatic when domain DNS is already on the same Cloudflare account"
     context: "unruly-chain-imprint.md#website"
+
+  - subject: "GA4"
+    predicate: "measurement ID"
+    object: "G-D4FLE07ZYS"
+    context: "commit:335f512, 2026-09-14"
+
+  - subject: "GA4"
+    predicate: "property and stream"
+    object: "property 554102515, stream 15776120947"
+    context: "commit:335f512, 2026-09-14"
+
+  - subject: "GA4"
+    predicate: "tag location"
+    object: "assets/site.js (shared source, loads on every page)"
+    context: "commit:335f512, 2026-09-14"
+
+  - subject: "GA4"
+    predicate: "consent mode"
+    object: "v2: analytics_storage granted, ad_storage/ad_user_data/ad_personalization denied"
+    context: "commit:335f512, 2026-09-14"
+
+  - subject: "contact email"
+    predicate: "is"
+    object: "contact@unrulychain.com, routed via Cloudflare Email Routing to mitch@mandmkelly.com"
+    context: "Mitch direction, 2026-09-10"

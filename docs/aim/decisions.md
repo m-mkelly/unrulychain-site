@@ -1,7 +1,7 @@
 ---
 type: aim-decisions
 app: unrulychain-site
-updated: 2026-09-10
+updated: 2026-09-19
 ---
 
 # Unruly Chain Site: Decisions
@@ -81,3 +81,51 @@ updated: 2026-09-10
 **Decision:** Email-only subscribe form posts to Cloudflare Pages Function storing in KV namespace `unrulychain-subscribers`. Frontend uses a persistent `<div aria-live="polite" role="status">` updated by JS.
 
 **Rationale:** Owned email capture preferred over Substack dependency. Persistent live region is the correct ARIA pattern for dynamic status messages.
+
+## DEC-013: GA4 installed (2026-09-14)
+
+**Decision:** Google Analytics 4 installed via assets/site.js (shared source, every page). Measurement ID G-D4FLE07ZYS, property 554102515, stream 15776120947. Consent mode v2: analytics_storage granted per privacy policy disclosure, ad_storage/ad_user_data/ad_personalization denied.
+
+**Rationale:** Analytics needed for publication launch tracking. Privacy policy already disclosed analytics use (DEC-006). Subscribe form uses preventDefault/fetch, preventing enhanced measurement from capturing email values.
+
+**Impact:** Commits 335f512, a0a570c, fe067ed. Asana task 1218346607052092 closed.
+
+## DEC-014: Substack link removed from all footers (2026-09-14)
+
+**Decision:** Substack link (mitchkelly.substack.com) removed from footer Connect section on all 7 pages. Present only in the Mitch Kelly author bio on author.html.
+
+**Rationale:** Mitch direction. Footer is site-wide imprint branding; Substack is an author-level link. Placement distinction is meaningful.
+
+**Impact:** Commits 335f512, a0a570c, fe067ed.
+
+## DEC-015: Newsletter branding changed to Unreasonable Scientist (2026-09-14)
+
+**Decision:** Newsletter sections across all pages rebranded from Substack to "Unreasonable Scientist." Author bio link changed from "Newsletter on Substack" (mitchkelly.substack.com) to "Unreasonable Scientist" (www.unreasonablescientist.com).
+
+**Rationale:** Unreasonable Scientist is the public-facing essay and newsletter brand. Custom domain replaces Substack URL.
+
+**Impact:** Commits a8b87ea, 5feb982, 160e539, e2bdede. All newsletter section-tag elements updated. Author bio link URL and label updated.
+
+## DEC-016: Centrifuge landing page reworked for publication (2026-09-14)
+
+**Decision:** Centrifuge book page updated from generic "forthcoming" treatment to concrete September 2026 publication state.
+
+**Rationale:** Book nearing publication. Page needed to reflect actual timeline.
+
+**Impact:** Commit 8713df7. centrifuge/index.html rewritten.
+
+## DEC-017: Centrifuge social preview metadata added (2026-09-14)
+
+**Decision:** Canonical URL and Open Graph metadata (og:title, og:description, og:image, og:url, twitter:card) added to centrifuge/index.html.
+
+**Rationale:** Social sharing of the book page should produce a branded preview card.
+
+**Impact:** Commit d15bcc7.
+
+## DEC-018: David E. Norman author bio added (2026-09-19)
+
+**Decision:** Bio text: "David E. Norman has a background in molecular biology. He left the biomedical establishment on his own terms and does not maintain a public presence."
+
+**Rationale:** Mitch direction. Minimal factual bio consistent with pen name privacy. No connection to M&M Kelly or Mitch Kelly.
+
+**Impact:** Commit f165bdf.

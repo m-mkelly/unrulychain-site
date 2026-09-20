@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: identity
-  updated: 2026-09-10
+  updated: 2026-09-19
 
 triples:
   - subject: "Unruly Chain"
@@ -70,7 +70,22 @@ triples:
     object: "mitchkelly.substack.com, publication name 'Unreasonable Man', account email mitch@mandmkelly.com"
     context: "infrastructure-handoff"
 
+  - subject: "Unreasonable Scientist"
+    predicate: "is"
+    object: "www.unreasonablescientist.com, the newsletter and essay brand used on the site (replaces Substack branding)"
+    context: "commit:a8b87ea, 2026-09-14"
+
   - subject: "author"
     predicate: "is"
     object: "Mitch Kelly"
     context: "unruly-chain-imprint.md#implementation-plan"
+
+  - subject: "author"
+    predicate: "is"
+    object: "David E. Norman (pen name, forthcoming)"
+    context: "Mitch direction, 2026-09-10"
+
+  - subject: "David E. Norman"
+    predicate: "bio"
+    object: "Has a background in molecular biology. Left the biomedical establishment on his own terms and does not maintain a public presence."
+    context: "Mitch direction, 2026-09-19"

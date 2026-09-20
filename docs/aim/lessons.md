@@ -1,7 +1,7 @@
 ---
 type: aim-lessons
 app: unrulychain-site
-updated: 2026-09-10
+updated: 2026-09-19
 ---
 
 # Unruly Chain Site: Lessons
@@ -35,3 +35,17 @@ updated: 2026-09-10
 **Lesson:** ChatGPT's review correctly identified that the original copy drafts reverse-engineered a publishing philosophy from the book catalog. Statements like "for readers who want the full argument, not the summary" sound plausible but were never established as Unruly Chain doctrine. Short honest copy outperforms longer inferred copy.
 
 **Rule:** If the established facts support two sentences, write two sentences. Ask the operator for positions rather than inferring them.
+
+## LES-006: Footer vs. bio are scope-distinct for link placement (2026-09-14)
+
+**Lesson:** Claude initially kept the Substack link on author.html's footer when removing it from other pages. Mitch corrected: the footer is site-wide imprint territory, not author-specific. The link belongs in the author bio section, not the footer Connect section, even on a page about that author. Placement within page architecture carries meaning.
+
+**Trigger:** Three commits required to get the Substack link placement right (335f512, a0a570c, fe067ed).
+
+**Rule:** Footer content is imprint-level. Author-specific links go in the author's bio section.
+
+## LES-007: Main branch auto-deploys; branch previews do not (2026-09-14)
+
+**Lesson:** Pushes to the main branch trigger Cloudflare Pages production deploys automatically. This is distinct from LES-004 (branch preview deploys require a manual API POST). The two deploy paths have different trigger mechanisms.
+
+**Trigger:** Confirmed during GA4 install and footer fix session. Post-deploy verification required GitHub API checks because the live site is outside the sandbox egress allowlist.

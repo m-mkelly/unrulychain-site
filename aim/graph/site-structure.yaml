@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-09-10
+  updated: 2026-09-19
 
 triples:
   - subject: "tech stack"
@@ -18,7 +18,7 @@ triples:
   - subject: "pages"
     predicate: "are"
     object: "index.html, centrifuge/index.html, last-old-man/index.html, author.html, about.html, privacy.html, press.html"
-    context: "repo:feature/chatgpt-initial-build, 2026-09-10"
+    context: "repo:main, 2026-09-10"
 
   - subject: "subscribe function"
     predicate: "is"
@@ -44,3 +44,28 @@ triples:
     predicate: "requires"
     object: "base component styles before responsive media queries to avoid cascade override"
     context: "LES-003"
+
+  - subject: "newsletter sections"
+    predicate: "branded as"
+    object: "Unreasonable Scientist (section-tag text across all pages with newsletter sections)"
+    context: "commits:a8b87ea/5feb982/160e539/e2bdede, 2026-09-14"
+
+  - subject: "Substack link"
+    predicate: "absent from"
+    object: "all site-wide footers (removed 2026-09-14)"
+    context: "DEC-014"
+
+  - subject: "author bio link"
+    predicate: "is"
+    object: "Unreasonable Scientist (www.unreasonablescientist.com) in Mitch Kelly bio on author.html"
+    context: "commit:160e539, 2026-09-14"
+
+  - subject: "Centrifuge page"
+    predicate: "has"
+    object: "canonical URL and Open Graph social preview metadata (og:title, og:description, og:image, og:url, twitter:card)"
+    context: "commit:d15bcc7, 2026-09-14"
+
+  - subject: "Centrifuge page"
+    predicate: "reworked for"
+    object: "September 2026 publication (no longer generic forthcoming)"
+    context: "commit:8713df7, 2026-09-14"

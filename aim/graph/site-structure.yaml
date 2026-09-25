@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-09-19
+  updated: 2026-09-25
 
 triples:
   - subject: "tech stack"
@@ -69,3 +69,29 @@ triples:
     predicate: "reworked for"
     object: "September 2026 publication (no longer generic forthcoming)"
     context: "commit:8713df7, 2026-09-14"
+
+  - subject: "book covers"
+    predicate: "are"
+    object: "final Dallas Peters artwork, served as 1067x1600 progressive JPEG at assets/cover-centrifuge.jpg and assets/cover-last-old-man.jpg"
+    context: "DEC-019"
+
+  - subject: "homepage Centrifuge hero background"
+    predicate: "uses"
+    object: "assets/retro-science-excavation.jpg at 62% center (desktop) and 70% center (800px and below); newsletter strip remains retro-science-field.jpg"
+    context: "DEC-020"
+
+  - subject: "Centrifuge book page hero"
+    predicate: "uses"
+    object: "assets/retro-science-operations.jpg center/cover; Centrifuge cover translated 18px right (10px at 800px and below)"
+    context: "DEC-021"
+
+  - subject: "Last Old Man book page hero"
+    predicate: "uses"
+    object: "assets/retro-science-observatory.jpg via inline style; position 100% center (desktop), 85% (1200px and below), 60% (800px and below)"
+    context: "DEC-022"
+
+  - subject: "book page covers"
+    predicate: "are"
+    object: "hardcover renders cover-centrifuge-book.jpg and cover-last-old-man-book.jpg; home and social images use the flat cover files"
+    context: "DEC-023"
+

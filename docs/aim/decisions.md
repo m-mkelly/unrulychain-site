@@ -1,7 +1,7 @@
 ---
 type: aim-decisions
 app: unrulychain-site
-updated: 2026-09-19
+updated: 2026-09-25
 ---
 
 # Unruly Chain Site: Decisions
@@ -129,3 +129,11 @@ updated: 2026-09-19
 **Rationale:** Mitch direction. Minimal factual bio consistent with pen name privacy. No connection to M&M Kelly or Mitch Kelly.
 
 **Impact:** Commit f165bdf.
+
+## DEC-019: Final Dallas Peters covers installed (2026-09-25)
+
+**Decision:** Placeholder covers for Centrifuge and Last Old Man replaced with the final Dallas Peters artwork. Print masters (4167x6250, 2:3) exported as progressive JPEG at 1067x1600, quality 85, under the existing filenames `assets/cover-centrifuge.jpg` and `assets/cover-last-old-man.jpg`.
+
+**Rationale:** Mitch direction. Keeping filenames means no HTML or CSS changes, and the Centrifuge og:image and twitter:image pick up the new cover automatically. Print masters are too heavy to serve. The previous Last Old Man file was a PNG with a .jpg extension; it is now a true JPEG.
+
+**Impact:** Centrifuge cover aspect ratio changes from 0.58 to 0.667. Cover CSS sizes by width only, so rendered height shrinks slightly with no layout change. Imprint logo and favicon are separate work and unaffected.

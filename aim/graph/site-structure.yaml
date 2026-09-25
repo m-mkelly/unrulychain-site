@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-09-19
+  updated: 2026-09-25
 
 triples:
   - subject: "tech stack"
@@ -69,3 +69,8 @@ triples:
     predicate: "reworked for"
     object: "September 2026 publication (no longer generic forthcoming)"
     context: "commit:8713df7, 2026-09-14"
+
+  - subject: "book covers"
+    predicate: "are"
+    object: "final Dallas Peters artwork, served as 1067x1600 progressive JPEG at assets/cover-centrifuge.jpg and assets/cover-last-old-man.jpg"
+    context: "DEC-019"

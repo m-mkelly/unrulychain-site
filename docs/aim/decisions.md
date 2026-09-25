@@ -146,3 +146,11 @@ updated: 2026-09-25
 
 **Impact:** Cover size, stage geometry and layout unchanged. The requested 5 to 10 percent zoom reduction was not applied: under `cover` sizing the frame height is the limiting dimension, so any reduction leaves blank bands top and bottom. On mobile the left reveal is about 7px wide because of the existing stage geometry, so little excavation shows there.
 
+## DEC-021: Centrifuge book page hero background and cover placement (2026-09-25)
+
+**Decision:** The Centrifuge book page hero (`.feature-bg`) now uses `assets/retro-science-operations.jpg`, a mid-century operations room with a glass map wall (1918x820 progressive JPEG), center crop. The Centrifuge cover is shifted right with the `translate` property, scoped by `.feature-cover[src$="cover-centrifuge.jpg"]`: 18px above 800px, 10px at 800px and below.
+
+**Rationale:** Mitch approved the image; ChatGPT (design authority) specified the placement refinement. `translate` was used instead of `transform` or `left` because `.reveal` animates `transform`, and because it leaves cover size, vertical position and page geometry untouched. The attribute selector scopes the change to Centrifuge without HTML edits; Last Old Man shares `.feature-cover` and is unchanged.
+
+**Impact:** The Last Old Man page keeps its inline `.feature-bg` override. The "About the book" panel (`.about-art`) still uses `retro-science-centrifuge.jpg`. On desktop the cover still overhangs the panel's left edge by 9px at 1440 wide, so the added map reveal is above and beside the cover rather than to its left.
+

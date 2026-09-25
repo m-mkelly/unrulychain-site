@@ -74,3 +74,9 @@ triples:
     predicate: "are"
     object: "final Dallas Peters artwork, served as 1067x1600 progressive JPEG at assets/cover-centrifuge.jpg and assets/cover-last-old-man.jpg"
     context: "DEC-019"
+
+  - subject: "homepage Centrifuge hero background"
+    predicate: "uses"
+    object: "assets/retro-science-excavation.jpg at 62% center (desktop) and 70% center (800px and below); newsletter strip remains retro-science-field.jpg"
+    context: "DEC-020"
+

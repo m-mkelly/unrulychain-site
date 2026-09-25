@@ -137,3 +137,12 @@ updated: 2026-09-25
 **Rationale:** Mitch direction. Keeping filenames means no HTML or CSS changes, and the Centrifuge og:image and twitter:image pick up the new cover automatically. Print masters are too heavy to serve. The previous Last Old Man file was a PNG with a .jpg extension; it is now a true JPEG.
 
 **Impact:** Centrifuge cover aspect ratio changes from 0.58 to 0.667. Cover CSS sizes by width only, so rendered height shrinks slightly with no layout change. Imprint logo and favicon are separate work and unaffected.
+
+## DEC-020: Centrifuge homepage hero background replaced with excavation image (2026-09-25)
+
+**Decision:** The homepage hero background behind the Centrifuge cover (`.cover-stage::before`) now uses `assets/retro-science-excavation.jpg`, an archaeological excavation with a river and jungle in the distance (1918x820 progressive JPEG). Position is `62% center` on desktop and tablet, and `70% center` under the 800px breakpoint. The newsletter strip keeps `retro-science-field.jpg`.
+
+**Rationale:** Mitch selected the image; ChatGPT (design authority) specified the crop. At 62%, the central monolith sits behind the cover, the left reveal shows excavation and an archaeologist, and the right reveal shows stone ring and river haze. Mobile favors the river reveal more strongly. A new filename was used because `retro-science-field.jpg` also feeds `.newsletter-art`.
+
+**Impact:** Cover size, stage geometry and layout unchanged. The requested 5 to 10 percent zoom reduction was not applied: under `cover` sizing the frame height is the limiting dimension, so any reduction leaves blank bands top and bottom. On mobile the left reveal is about 7px wide because of the existing stage geometry, so little excavation shows there.
+

@@ -90,3 +90,8 @@ triples:
     object: "assets/retro-science-observatory.jpg via inline style; position 100% center (desktop), 85% (1200px and below), 60% (800px and below)"
     context: "DEC-022"
 
+  - subject: "book page covers"
+    predicate: "are"
+    object: "hardcover renders cover-centrifuge-book.jpg and cover-last-old-man-book.jpg; home and social images use the flat cover files"
+    context: "DEC-023"
+

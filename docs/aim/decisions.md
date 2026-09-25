@@ -162,3 +162,11 @@ updated: 2026-09-25
 
 **Impact:** Desktop and tablet show all three scientists. Mobile shows two; the third falls outside the narrow frame at every position.
 
+## DEC-023: Book page covers rendered as physical hardcovers; Centrifuge figure note removed (2026-09-25)
+
+**Decision:** Book pages use `assets/cover-centrifuge-book.jpg` and `assets/cover-last-old-man-book.jpg`, which are the final covers with a baked spine hinge, edge lighting and fore-edge shading. `.feature-cover` gains `border-radius:2px 5px 5px 2px`. The Centrifuge translate rules now target `cover-centrifuge-book.jpg`. The Centrifuge page figure note ("Fig. 1 / Organizational orbit / Authority / judgment / memory") is removed from the markup.
+
+**Rationale:** Mitch direction. The previous placeholder covers carried the hardcover look in the image files; the final Dallas Peters covers are flat. The figure note was written for the space station image and read as stray text over the new background.
+
+**Impact:** Home page covers, og:image and twitter:image keep the flat files. `.figure-note` CSS remains in styles.css, unused. `retro-science-laboratory.jpg` is no longer referenced by any page.
+

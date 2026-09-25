@@ -85,3 +85,8 @@ triples:
     object: "assets/retro-science-operations.jpg center/cover; Centrifuge cover translated 18px right (10px at 800px and below)"
     context: "DEC-021"
 
+  - subject: "Last Old Man book page hero"
+    predicate: "uses"
+    object: "assets/retro-science-observatory.jpg via inline style; position 100% center (desktop), 85% (1200px and below), 60% (800px and below)"
+    context: "DEC-022"
+

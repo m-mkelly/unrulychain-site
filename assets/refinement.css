@@ -90,8 +90,8 @@
 
 /* Individual placements protect the focal subjects of each supporting scene. */
 .book-scene{position:relative;isolation:isolate;width:100%;line-height:0;display:flex;justify-content:flex-start;align-items:center;padding:32px 0 10px;--cover-width:40%;--cover-x:0%;--art-center:56%}
-.scene-excavation{--cover-x:0%;--art-center:56%}
-.scene-operations{--cover-x:60%;--art-center:48%}
+.scene-excavation{--cover-x:6%;--art-center:56%}
+.scene-operations{--cover-x:54%;--art-center:48%}
 .scene-observatory{--cover-x:4%;--art-center:54%}
 .book-scene>.scene-art,.publisher-home .home-art .scene-art{position:absolute;z-index:-1;left:0;top:var(--art-center);transform:translateY(-50%);display:block;width:100%;height:auto;object-fit:contain;opacity:.82}
 .publisher-home .book-scene>.scene-cover,.original-title .book-scene>.scene-cover{
@@ -120,8 +120,11 @@
  .publisher-home .home-panorama,.publisher-home .next-art,.original-title .editorial-plate{order:-1}
  .publisher-home .book-scene>.scene-cover,.original-title .book-scene>.scene-cover{width:var(--cover-width);max-width:260px;box-shadow:6px 9px 14px #0006}
  .book-scene{padding:22px 0 8px}
- .scene-operations{--cover-width:42%;--cover-x:58%}
+ .scene-operations{--cover-width:42%;--cover-x:52%}
  .scene-observatory{--cover-width:44%;--cover-x:2%}
  .publisher-home .hero-home h1,.original-title .feature-title{font-size:clamp(52px,13vw,78px)}
  .original-title .feature-visual{padding-top:6px}
 }
+.press-images{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-end;margin:18px 0 22px}.press-images figure{margin:0;flex:0 1 160px;min-width:0}.press-images figure+figure{flex-basis:180px}.press-images a{display:block}.press-images img{display:block;width:100%;height:auto;box-shadow:8px 10px 18px #0003}.press-images figcaption{margin-top:10px;font-family:var(--sans);font-size:11px;letter-spacing:.08em;text-transform:uppercase}.press-text{display:grid;grid-template-columns:1fr 1fr;gap:56px}.press-text p{max-width:62ch}@media(max-width:800px){.press-images figure{flex-basis:120px}.press-images figure+figure{flex-basis:135px}.press-text{display:block}.press-text>div+div{margin-top:40px}}
+.button-download::after{content:none}.button-download span{font-size:18px;line-height:1}.press-text h2{font-size:clamp(30px,3vw,44px);line-height:.95}@media(max-width:800px){.press-text h2{font-size:clamp(26px,7.5vw,36px)}}
+.newsletter .subscribe-err{color:#ff8a7a}

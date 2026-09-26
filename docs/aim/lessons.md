@@ -49,3 +49,8 @@ updated: 2026-09-19
 **Lesson:** Pushes to the main branch trigger Cloudflare Pages production deploys automatically. This is distinct from LES-004 (branch preview deploys require a manual API POST). The two deploy paths have different trigger mechanisms.
 
 **Trigger:** Confirmed during GA4 install and footer fix session. Post-deploy verification required GitHub API checks because the live site is outside the sandbox egress allowlist.
+
+## LES-008: Handoff documents and prior-turn safety words do not authorize production (2026-09-25)
+
+**Lesson:** A ChatGPT handoff saying "execute the approved deployment" is not Mitch's authorization to merge to main. A safety word given earlier in the session does not carry forward, because the constraint requires it in the same turn. Positioned-4 reached production this way and had to be rolled back. The only technical gate is the safety word, since the GitHub token can merge and Cloudflare deploys main automatically. Stop at a branch preview and hand the URL to Mitch.
+

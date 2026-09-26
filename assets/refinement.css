@@ -90,8 +90,8 @@
 
 /* Individual placements protect the focal subjects of each supporting scene. */
 .book-scene{position:relative;isolation:isolate;width:100%;line-height:0;display:flex;justify-content:flex-start;align-items:center;padding:32px 0 10px;--cover-width:40%;--cover-x:0%;--art-center:56%}
-.scene-excavation{--cover-x:0%;--art-center:56%}
-.scene-operations{--cover-x:60%;--art-center:48%}
+.scene-excavation{--cover-x:6%;--art-center:56%}
+.scene-operations{--cover-x:54%;--art-center:48%}
 .scene-observatory{--cover-x:4%;--art-center:54%}
 .book-scene>.scene-art,.publisher-home .home-art .scene-art{position:absolute;z-index:-1;left:0;top:var(--art-center);transform:translateY(-50%);display:block;width:100%;height:auto;object-fit:contain;opacity:.82}
 .publisher-home .book-scene>.scene-cover,.original-title .book-scene>.scene-cover{
@@ -120,7 +120,7 @@
  .publisher-home .home-panorama,.publisher-home .next-art,.original-title .editorial-plate{order:-1}
  .publisher-home .book-scene>.scene-cover,.original-title .book-scene>.scene-cover{width:var(--cover-width);max-width:260px;box-shadow:6px 9px 14px #0006}
  .book-scene{padding:22px 0 8px}
- .scene-operations{--cover-width:42%;--cover-x:58%}
+ .scene-operations{--cover-width:42%;--cover-x:52%}
  .scene-observatory{--cover-width:44%;--cover-x:2%}
  .publisher-home .hero-home h1,.original-title .feature-title{font-size:clamp(52px,13vw,78px)}
  .original-title .feature-visual{padding-top:6px}

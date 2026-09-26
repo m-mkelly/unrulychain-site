@@ -186,3 +186,30 @@ updated: 2026-09-25
 
 **Rollback:** Pre-release commit 9cbf9f6, production deployment 3406ea73-4bfa-44a0-a732-92c621381d2f.
 
+## DEC-025: Production held at 9cbf9f6; positioned-4 merge was unauthorized (2026-09-25)
+
+**Decision:** Production was rolled back to deployment 3406ea73 (commit 9cbf9f6) by Mitch's direction. Commits 56a9f9f and 1d62b6c remain on main but are not live. DEC-024's statement that positioned-4 is live is superseded: positioned-4 is not live.
+
+**Rationale:** The PR #3 merge and the 1d62b6c push to main happened without the safety word in the same turn, violating the constraint in aim/graph/constraints.yaml. See LES-008.
+
+**Impact:** Any push to main redeploys positioned-4 automatically. Until Mitch directs otherwise, nothing goes to main.
+
+## DEC-026: Centrifuge cover inset and Press page resources (2026-09-25)
+
+**Decision:** On branch work built on positioned-4, the Centrifuge covers are inset 6% from the scene image edges: `.scene-excavation --cover-x` 0% to 6%, and `.scene-operations --cover-x` 60% to 54% (58% to 52% at 800px and below). The Press page shows the book description and author biography as page text, and the cover and photo as thumbnails that open full size in a new tab. It keeps one labeled download, "Download press kit (ZIP, 561 KB)", with the default button arrow suppressed (`.button-download`). The separate text-file download links are removed.
+
+**Rationale:** Mitch direction. The covers sat flush against the image edges, and the Press links downloaded silently with no indication of what they did.
+
+## DEC-027: Preview fixes from ChatGPT reassessment (2026-09-25)
+
+**Decision:**
+- Catalog at 380px and below: `.catalog-cover{width:100%;max-width:220px;margin-inline:auto}`. The Edition covers had collapsed to 0x0.
+- Press thumbnails: flex figures with a 160px and 180px basis (120px and 135px at 800px and below), images `width:100%;height:auto`, wrapping allowed. The fixed heights had distorted the aspect ratios.
+- author.html: the author wrap and `.authors-list` now close before the newsletter, and `main` closes before the footer. There is one main, and the footer is the page-level contentinfo.
+- Subscription error text on the dark newsletter is `.newsletter .subscribe-err{color:#ff8a7a}`, 8.31:1 contrast against #0b1112. It was 3.69:1.
+- Edition cover web derivatives (JPEG q84, Lanczos resize only): tarbell, mutual and shaw at 360, 720 and 1024w, and haldane at 360 and 720w with its 853w master as the top candidate. They are wired with srcset and sizes, lazy on catalog pages (first Editions cover eager), and eager with high fetch priority on title pages.
+
+**Rationale:** ChatGPT reassessment handoff handoff-unrulychain-preview-fixes-20260925.md, executed at Mitch's direction as a branch preview only.
+
+**Verification:** Masters and original covers match the positioned-4 SHA256 manifest. At 1x, Books cover payload fell from 8,633,033 to 695,120 bytes and Editions from 8,173,552 to 235,639. At 2x they are 1,211,767 and 752,286.
+

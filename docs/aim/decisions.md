@@ -213,3 +213,11 @@ updated: 2026-09-25
 
 **Verification:** Masters and original covers match the positioned-4 SHA256 manifest. At 1x, Books cover payload fell from 8,633,033 to 695,120 bytes and Editions from 8,173,552 to 235,639. At 2x they are 1,211,767 and 752,286.
 
+## DEC-028: Positioned-4 with preview fixes deployed to production (2026-09-25)
+
+**Decision:** Mitch approved the preview at fix-preview-fixes-20260925 and gave the safety word in the same turn. It was squash merged as PR #4, commit 7bfe825, and production deployment dd0281c6 succeeded on unrulychain.com. The Shaw catalog width is left as-is. Signup testing is deferred. No Edition page signup link will be added.
+
+**Verification:** On production, all 13 public pages, the favicon, press downloads and a cover derivative return 200, and a missing path returns 404. robots.txt and sitemap.xml have correct content types, and there is no noindex. The 6% inset, the error color, the Press ZIP label and the catalog derivatives are live. Invalid signup returns 400.
+
+**Rollback:** The previous approved production state was deployment 3406ea73 (commit 9cbf9f6).
+

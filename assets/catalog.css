@@ -1,0 +1,46 @@
+
+/* Catalog extension: inherits production palette, typography and masthead. */
+.reveal,.reveal-stagger>*{opacity:1;transform:none}
+.review-note{background:var(--ink);color:var(--paper);padding:9px var(--pad);font:12px/1.4 var(--sans);letter-spacing:.04em}
+.review-note a{text-decoration:underline;margin-left:12px}
+.catalog-intro{padding:54px 0 32px;border-bottom:1px solid var(--line)}
+.catalog-top{display:flex;align-items:end;justify-content:space-between;gap:30px}
+.catalog-intro h1{font:900 clamp(64px,7.5vw,108px)/.85 var(--display);text-transform:uppercase;letter-spacing:-.025em;margin:10px 0 20px}
+.catalog-intro p{max-width:650px;font-size:21px;margin:0 0 18px}
+.catalog-jumps{display:flex;gap:28px;padding:14px 0 0;font:700 14px/1.4 var(--sans)}
+.catalog-jumps a{padding-bottom:6px;border-bottom:2px solid var(--red)}
+.catalog-section{padding:42px 0 50px;scroll-margin-top:130px}
+.catalog-section+.catalog-section{border-top:1px solid var(--line)}
+.section-heading{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:30px}
+.section-heading h2,.edition-about h2{font:900 clamp(38px,4vw,58px)/.95 var(--display);text-transform:uppercase;margin:0 0 8px}
+.section-heading p{font-size:19px;margin:10px 0 0;max-width:710px}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.catalog-book{display:grid;grid-template-columns:minmax(130px,.72fr) 1fr;gap:28px;align-items:center}
+.catalog-cover{display:block;background:rgba(246,239,223,.4);padding:18px 20px;border-bottom:1px solid var(--line)}
+.catalog-cover img{width:100%;height:auto;box-shadow:8px 10px 14px #0b111228}
+.catalog-book h3{font:900 clamp(28px,2.5vw,40px)/1 var(--display);text-transform:uppercase;margin:14px 0 10px;overflow-wrap:break-word}
+.catalog-book .subtitle{font:700 19px/1.15 var(--display);text-transform:uppercase;color:var(--red)}
+.catalog-book .byline{font:18px/1.4 var(--serif);margin:15px 0 8px}
+.catalog-book p{font-size:17px;line-height:1.45}
+.catalog-book .text-link{display:inline-block;font-size:12px;margin-top:12px}
+.pub-state{font:700 12px/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.edition-section{background:#e9dec6}
+.catalog-disclaimer{padding:22px 0;border-top:1px solid var(--line);font:14px/1.5 var(--sans)}
+.chain-line{padding:35px 0 44px;font:italic clamp(22px,2.4vw,32px)/1.35 var(--serif)}
+.edition-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.75fr);gap:80px;align-items:center;padding:48px 0 56px;border-bottom:1px solid var(--line)}
+.edition-hero h1{font:900 clamp(46px,5.3vw,80px)/.97 var(--display);letter-spacing:-.02em;text-transform:uppercase;margin:14px 0 22px}
+.historical-author{font:700 26px/1.2 var(--sans);margin:20px 0 12px}
+.editor-credit{font:16px/1.5 var(--sans);margin:0 0 28px}
+.edition-deck{font-size:24px;line-height:1.3;max-width:620px}
+.edition-plate{margin:0;padding:24px 38px;background:var(--plate,#c8af83);border:1px solid var(--line)}
+.edition-plate img{width:100%;height:auto;max-width:360px;margin:auto;box-shadow:12px 14px 20px #0003}
+.edition-about{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:48px 0;border-bottom:1px solid var(--line)}
+.edition-about p{font-size:20px}
+.edition-adds{border-left:1px solid var(--line);padding-left:32px}
+.edition-adds h3{font:700 23px var(--display);text-transform:uppercase;margin-bottom:8px}
+.edition-adds p{font-size:17px;margin-top:0}
+.edition-footer{padding:32px 0 45px}
+.breadcrumb{font-size:12px}
+@media(max-width:1050px){.book-grid{gap:30px}.catalog-book{gap:20px;grid-template-columns:.8fr 1fr}.edition-hero{gap:40px}.catalog-cover{padding:12px}.section-heading{align-items:start}}
+@media(max-width:800px){.catalog-top,.section-heading{display:block}.catalog-intro{padding:32px 0 26px}.catalog-intro p{font-size:19px}.catalog-jumps{margin-bottom:8px}.book-grid{grid-template-columns:1fr;gap:36px}.catalog-book{grid-template-columns:minmax(110px,.7fr) 1fr;gap:22px}.catalog-book h3{font-size:29px}.catalog-book .subtitle{font-size:17px}.catalog-section{padding:32px 0}.section-heading .text-link{display:inline-block;margin-top:20px}.edition-hero{grid-template-columns:1fr;gap:26px;padding:30px 0}.edition-hero h1{font-size:48px}.edition-plate{max-width:430px;width:100%;margin:auto}.edition-about{grid-template-columns:1fr;gap:24px;padding:32px 0}.edition-adds{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.edition-deck{font-size:22px}}
+@media(max-width:380px){.catalog-book{grid-template-columns:1fr}.catalog-cover{max-width:220px;margin:auto}.catalog-jumps{flex-wrap:wrap}}

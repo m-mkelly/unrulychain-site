@@ -1,0 +1,9 @@
+
+.series-cover{position:relative;isolation:isolate;display:block;width:100%;aspect-ratio:2/3;padding:0;margin:0;overflow:hidden;box-sizing:border-box;background:#172a25;box-shadow:5px 8px 16px #0002}
+.series-cover .cover-art-full{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;margin:0;object-fit:cover;box-shadow:none;border:0}
+.series-cover .cover-lettering{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:visible}
+.cover-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;align-items:start;margin:34px 0 50px}
+.cover-gallery figure{margin:0;min-width:0}.cover-gallery figcaption{font:14px/1.5 Arial,sans-serif;margin-top:16px}.cover-gallery figcaption a{text-decoration:underline;text-underline-offset:3px}
+.catalog-cover .series-cover{box-shadow:none}.edition-plate .series-cover{max-width:420px;margin:auto}
+@media(max-width:900px){.cover-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}}
+@media(max-width:560px){.cover-gallery{grid-template-columns:1fr}.cover-gallery figure{width:100%;max-width:390px;margin:auto}}

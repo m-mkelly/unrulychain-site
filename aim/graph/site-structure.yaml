@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-09-25
+  updated: 2026-09-26
 
 triples:
   - subject: "tech stack"
@@ -107,6 +107,6 @@ triples:
 
   - subject: "favicon"
     predicate: "is"
-    object: "Dallas Peters publisher mark: assets/favicon.svg, favicon-32.png, apple-touch-icon.png"
-    context: "DEC-024"
+    object: "approved offset UC favicon: white U and C, separated, U higher than C, on site red #c63b2e; assets/favicon.svg, favicon-32.png, favicon-192.png, apple-touch-icon.png"
+    context: "DEC-029"
 

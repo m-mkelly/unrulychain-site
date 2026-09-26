@@ -1,7 +1,7 @@
 ---
 type: aim-decisions
 app: unrulychain-site
-updated: 2026-09-25
+updated: 2026-09-26
 ---
 
 # Unruly Chain Site: Decisions
@@ -221,3 +221,10 @@ updated: 2026-09-25
 
 **Rollback:** The previous approved production state was deployment 3406ea73 (commit 9cbf9f6).
 
+## DEC-029: Offset UC favicon replaces publisher-mark favicon (2026-09-26)
+
+**Decision:** Replace the previous publisher-mark favicon with the approved Unruly Chain UC mark: a white U and C beside each other without touching, with the U higher than the C to echo the imprint composition, on the site's canonical red #c63b2e. The approved letter silhouettes are preserved in `assets/favicon.svg`; raster derivatives are generated at 32, 180, and 192 pixels.
+
+**Rationale:** Mitch approved this favicon directly on 2026-09-26. The previous favicon was rejected.
+
+**Impact:** `assets/favicon.svg`, `assets/favicon-32.png`, `assets/favicon-192.png`, and `assets/apple-touch-icon.png` are replaced. HTML favicon URLs use cache key `uc-offset-20260926`. No layout, copy, analytics, subscription, or production configuration changes.

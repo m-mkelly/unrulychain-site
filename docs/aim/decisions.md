@@ -170,3 +170,19 @@ updated: 2026-09-25
 
 **Impact:** Home page covers, og:image and twitter:image keep the flat files. `.figure-note` CSS remains in styles.css, unused. `retro-science-laboratory.jpg` is no longer referenced by any page.
 
+## DEC-024: Release positioned-4 deployed: Books catalog, Unruly Editions, refined placement (2026-09-25)
+
+**Decision:** Deployed the ChatGPT package `unrulychain-approved-20260925-positioned4` (45 files, all SHA256 verified) as an overlay on main 9cbf9f6. Squash merge PR #3, commit 56a9f9f, authored mitch-f-kelly <mitch@mandmkelly.com>. Production deployment 9c4f2791 succeeded on unrulychain.com.
+
+**Contents:** New `/books/` catalog and `/editions/` index. Four Unruly Edition pages: Tarbell (Standard Oil), Haldane (Daedalus), Kropotkin (Mutual Aid), Shaw (Back to Methuselah), all "In preparation". Editions teaser and the publishing position statement on the home page. Refined cover placement per scene (`assets/refinement.css`), plus `catalog.css` and `series.css`. The publisher-mark favicon set (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`). Press downloads under `/press/`. `robots.txt`, `sitemap.xml`, `404.html`. `site.js`: content is visible by default without the scroll-reveal observer, the local-preview guard skips analytics and subscriptions, and subscribe has a 10 second timeout and response validation.
+
+**Rationale:** Mitch approved positioned-4 in the ChatGPT design conversation and directed Claude to deploy it. ChatGPT is the design authority; Claude owns integration, browser validation and deployment. Fields, Factories and Workshops is canceled; Bernard is not in this release.
+
+**Preserved:** `functions/api/subscribe.js` is byte-identical to the prior production version. KV binding SUBSCRIBERS (namespace a4bc7c7a6e5b47c6858f09cec3cd05b7) is unchanged for production and preview. `styles.css` and the GA4 configuration are unchanged. Aim and docs are untouched by the overlay. No _headers, _redirects or wrangler config existed, and none were added.
+
+**Verification:** Browser checks (Chromium) ran on all 14 pages at 1280px and 390px, with JavaScript on and off. They found no horizontal overflow, no broken images or local links, no console errors, one h1 per page, and no content hidden when script is off. Branch preview and production both returned 200 for all 13 public pages, the favicon files and the five press downloads. A missing path returned 404 with the site 404 page. robots.txt is served as text/plain and sitemap.xml as application/xml. No noindex appears on public production pages or headers. The subscribe endpoint rejected an invalid email with 400.
+
+**Limits:** No real subscription was submitted, so KV capture, mailing and unsubscribe are unverified on this release. The Edition cover masters are 2.4 to 2.8 MB PNGs, served unmodified because cover bytes are frozen. The repository has no CLAUDE.md or AIM.md; the aim was loaded from aim/ and docs/aim/.
+
+**Rollback:** Pre-release commit 9cbf9f6, production deployment 3406ea73-4bfa-44a0-a732-92c621381d2f.
+

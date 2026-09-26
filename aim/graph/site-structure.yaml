@@ -95,3 +95,18 @@ triples:
     object: "hardcover renders cover-centrifuge-book.jpg and cover-last-old-man-book.jpg; home and social images use the flat cover files"
     context: "DEC-023"
 
+  - subject: "Books catalog"
+    predicate: "lives at"
+    object: "/books/ with Original titles (Centrifuge, Last Old Man) and Unruly Editions groups; nav Books links here"
+    context: "DEC-024"
+
+  - subject: "Unruly Editions"
+    predicate: "published pages"
+    object: "/editions/ index plus standard-oil, daedalus, mutual-aid, back-to-methuselah; all In preparation"
+    context: "DEC-024"
+
+  - subject: "favicon"
+    predicate: "is"
+    object: "Dallas Peters publisher mark: assets/favicon.svg, favicon-32.png, apple-touch-icon.png"
+    context: "DEC-024"
+

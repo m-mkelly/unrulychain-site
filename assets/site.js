@@ -103,3 +103,33 @@
     form.querySelectorAll('input,button').forEach(el => el.disabled = false);
   });
 })();
+
+
+// Force Android Chrome to refresh the tab-card favicon for already-open tabs.
+// Chrome can retain a historical page-to-favicon bitmap even after normal reloads.
+// Two fresh physical icon URLs are applied sequentially so the renderer emits
+// favicon-change events instead of relying only on static <head> discovery.
+(() => {
+  const installTabFavicon = (href) => {
+    document.querySelectorAll('link[rel~="icon"]').forEach(link => link.remove());
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/png';
+    link.sizes = '32x32';
+    link.href = href;
+    document.head.appendChild(link);
+  };
+
+  const refreshTabFavicon = () => {
+    installTabFavicon('/assets/favicon-tab-refresh-a-20260927.png');
+    window.setTimeout(() => {
+      installTabFavicon('/assets/favicon-tab-refresh-b-20260927.png');
+    }, 250);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', refreshTabFavicon, { once: true });
+  } else {
+    refreshTabFavicon();
+  }
+})();

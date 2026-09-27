@@ -1,0 +1,15 @@
+{
+  "name": "Unruly Chain",
+  "short_name": "Unruly Chain",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#c63b2e",
+  "theme_color": "#c63b2e",
+  "icons": [
+    {
+      "src": "/assets/favicon-uc-20260927.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

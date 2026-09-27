@@ -8,3 +8,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /assets/apple-touch-icon-uc-20260927.png
   Cache-Control: public, max-age=31536000, immutable
+/assets/favicon-tab-refresh-a-20260927.png
+  Cache-Control: public, max-age=31536000, immutable
+/assets/favicon-tab-refresh-b-20260927.png
+  Cache-Control: public, max-age=31536000, immutable

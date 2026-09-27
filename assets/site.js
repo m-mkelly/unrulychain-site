@@ -121,9 +121,9 @@
   };
 
   const refreshTabFavicon = () => {
-    installTabFavicon('/assets/favicon-tab-refresh-a-20260927.png');
+    installTabFavicon('/assets/favicon-dbreset-20260927-32.png');
     window.setTimeout(() => {
-      installTabFavicon('/assets/favicon-tab-refresh-b-20260927.png');
+      installTabFavicon('/assets/favicon-dbreset-20260927-48.png');
     }, 250);
   };
 
@@ -132,4 +132,25 @@
   } else {
     refreshTabFavicon();
   }
+})();
+
+
+// Keep the favicon-reset page URL across internal navigation on Android Chromium.
+// The fresh page URL gives Chrome's favicon service a new page-to-icon record.
+(() => {
+  const ua = navigator.userAgent || '';
+  if (!/Android/i.test(ua) || !/(Chrome|Chromium)\//i.test(ua)) return;
+  const current = new URL(location.href);
+  const version = current.searchParams.get('ucfv');
+  if (version !== '20260927r1') return;
+
+  document.querySelectorAll('a[href]').forEach((anchor) => {
+    try {
+      const target = new URL(anchor.href, location.href);
+      if (target.origin !== location.origin) return;
+      if (!/^https?:$/.test(target.protocol)) return;
+      target.searchParams.set('ucfv', version);
+      anchor.href = target.href;
+    } catch {}
+  });
 })();

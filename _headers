@@ -12,3 +12,20 @@
   Cache-Control: public, max-age=31536000, immutable
 /assets/favicon-tab-refresh-b-20260927.png
   Cache-Control: public, max-age=31536000, immutable
+
+/favicon-dbreset-20260927.ico
+  Cache-Control: public, max-age=31536000, immutable
+/site-dbreset-20260927.webmanifest
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/favicon-dbreset-20260927.svg
+  Cache-Control: public, max-age=31536000, immutable
+/assets/favicon-dbreset-20260927-32.png
+  Cache-Control: public, max-age=31536000, immutable
+/assets/favicon-dbreset-20260927-48.png
+  Cache-Control: public, max-age=31536000, immutable
+/assets/apple-touch-icon-dbreset-20260927.png
+  Cache-Control: public, max-age=31536000, immutable
+/assets/android-chrome-dbreset-20260927-192.png
+  Cache-Control: public, max-age=31536000, immutable
+/assets/android-chrome-dbreset-20260927-512.png
+  Cache-Control: public, max-age=31536000, immutable

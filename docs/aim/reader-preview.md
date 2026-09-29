@@ -13,3 +13,7 @@ Mitch agreed to try five sizes (15, 17, 19, 21 and 23 px), default 17 px, contro
 ### Approved scene composition
 
 Mitch approved replacing the small desktop cover panel with a full-width illustrated excavation scene, title and subtitle on the left, and the existing interactive reader on the right. Use the existing excavation artwork. Preserve the reader's portrait proportions, dimensions and controls; the mockup's squat device was explicitly rejected. Keep the current mobile presentation. This change is authorized for preview only.
+
+### Release-copy preview
+
+At Mitch's request, preview “Available soon” on the homepage, Centrifuge catalog entry and book page, replacing September publication wording. Homepage and catalog actions link directly to the introduction. The book-page closing paragraph reads “Available soon. Read the introduction below and sign up for publication updates.” The existing publication-update link and form remain. These copy changes await Mitch's visual approval; no purchase availability or release date is promised.

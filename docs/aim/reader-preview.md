@@ -1,0 +1,7 @@
+## Centrifuge reader preview, 2026-09-29
+
+Mitch approved the portrait slate, warm cream screen, placement between About and the newsletter, hero link, UNRULY CHAIN nameplate, reduced-motion-aware warm-up, enlarge mode, approved controls and end card, exclusion of ISBNs, the AI training notice, and three reader analytics events. He requested familiar 1960s typography; the prototype uses a Palatino-first system serif stack without added fonts.
+
+The reader uses vanilla JavaScript and scoped CSS columns. It preserves the introduction as accessible HTML and a scrolling fallback without JavaScript. The canonical source SHA-256 is 755289c69be5a57a12fbb0c39cef139b5e7f8bca084b3a12e96136f91688ace0. Paragraphs and four thematic breaks are preserved; typographic quotes were introduced in the uploaded branch. The end card includes the approved excerpt, copyright, publisher, training notice and publication-update link, with the excluded imprint line absent.
+
+This is a preview only. No production merge is authorized. Visual review and the separate same-turn production safety word remain required.

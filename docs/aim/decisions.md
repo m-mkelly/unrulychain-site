@@ -228,3 +228,56 @@ updated: 2026-09-26
 **Rationale:** Mitch approved this favicon directly on 2026-09-26. The previous favicon was rejected.
 
 **Impact:** `assets/favicon.svg`, `assets/favicon-32.png`, `assets/favicon-192.png`, and `assets/apple-touch-icon.png` are replaced. HTML favicon URLs use cache key `uc-offset-20260926`. No layout, copy, analytics, subscription, or production configuration changes.
+
+## DEC-030: Heart of Darkness local review addition (2026-09-29)
+
+**Direction:** Mitch explicitly requested the approved Heart of Darkness addition, using the supplied cover unchanged and the approved two paragraphs, with status In Development. Add it at normal catalog weight, without implying that it is the next release, homepage prominence, a release date/year, preorder language, or signup. Run locally, verify desktop and mobile, and present for approval. Do not deploy.
+
+**Implementation:** Append one matching card after the four existing titles in both Books and Unruly Editions. Add `/editions/heart-of-darkness/` using shared site and edition components, plus a small title-scoped stylesheet for the copy and mobile cover-first order. Add the title URL to the sitemap. No shared CSS, JavaScript, homepage, or existing card changes. The supplied PNG is copied byte-for-byte to `assets/heart-of-darkness-cover.png`; SHA-256 `c2afc8572428f31acd0cd5af259b5923350a1e0914d68e9cb9198d3636975b83`. Its complete lettering and frame are already in the image, so no additional SVG overlay is applied.
+
+**Verification:** 28 Chromium page/viewport checks on the two catalogs, new title page, and homepage. JavaScript enabled at 320, 390, 800, 1050, and 1440px; disabled at 390 and 1440px. No horizontal overflow, broken images, browser errors, or missing h1. All 15 unique local links returned successful responses. Mobile menu opens and closes with Escape. Desktop and mobile screenshots inspected. Original catalog cards, homepage, and shared design/script assets verified unchanged. Cover matches the attachment byte-for-byte.
+
+**State:** Local branch only, based on main `37bd082`. Preview at `http://127.0.0.1:8765/editions/heart-of-darkness/`. Awaiting Mitch's visual approval. No push, hosted preview, production deploy, hosting configuration change, or subscription submission. Static local preview does not test Cloudflare Functions, which are unchanged.
+
+**Restore:** The parent commit preserves every prior tracked file; the addition consists only of two catalog insertions, the new title page, PNG and scoped CSS, one sitemap entry, and these aim records.
+
+
+### DEC-030 review update (2026-09-29)
+
+Mitch approved the Heart of Darkness visual preview with “This looks good.” He also requested proposed copy first for The Island of Dr. Moreau using his supplied cover, plus cleanup of Centrifuge introduction links outside its book page. Heart of Darkness is approved; production deployment remains unauthorized. Moreau has not been added pending copy review.
+
+## DEC-031: Route external introduction calls to the Centrifuge book page (2026-09-29)
+
+**Direction:** All “Read the Introduction” links outside the Centrifuge book page should lead to the Centrifuge book page rather than the introduction.
+
+**Implementation and verification:** Homepage action becomes “Explore the book” pointing to `centrifuge/`; Books catalog action becomes “Book details” pointing to `../centrifuge/`. The book page and its `#introduction` link remain unchanged. Both routes and the retained introduction link passed actual click checks at 390px and 1440px. No deployment.
+
+## DEC-032: Approved Moreau copy and local catalog addition (2026-09-29)
+
+**Authorization:** Mitch requested The Island of Dr. Moreau with his supplied cover and copy approval before implementation. After rejecting the first draft, he approved the replacement with “Approved” in chat `01a0ee0d-33ce-7e71-91c0-8d6d45ed4072`. The approved replacement begins “Scientific competence is becoming accessible to individuals outside the institutions that once monopolized it.” It frames the edition around citizen science, access to scientific competence, institutional authority, self-experimentation, and falsifiability. The rejected first draft is not used.
+
+**Implementation:** `/editions/island-of-dr-moreau/` follows the approved Heart of Darkness layout. Both catalog grids append a normal-weight card after Heart of Darkness. Status is In Development. The title page contains the two approved paragraphs verbatim, H. G. Wells as author, and An Unruly Edition. No release date, sequencing, preorder, or signup. The sitemap includes the new route. The supplied 1024x1536 PNG is preserved byte-for-byte at `assets/island-of-dr-moreau-cover.png`, SHA-256 `5f5796d8af93b75cba2ddd2ea11929a33267c00eaba04b80df72f50336d901b5`. No additional cover overlay.
+
+**Verification:** 21 Chromium checks across the title page and both catalogs. JavaScript enabled at 320, 390, 800, 1050, and 1440px; disabled at 390 and 1440px. No horizontal overflow, failed images, browser errors, or missing h1. All 15 unique local navigation targets returned successful responses. Approved paragraphs matched exactly. Mobile menu opens and closes with Escape. Desktop/mobile title screenshots and desktop catalog visually inspected. All existing cards, Heart of Darkness page, homepage, Centrifuge page, and shared design/script assets remain byte-identical to the prior local commit.
+
+**State:** Local preview only, `http://127.0.0.1:8765/editions/island-of-dr-moreau/`. No push, hosted preview, production deployment, or hosting configuration change. Mitch explicitly reiterated that live changes require the safety word; copy approval does not authorize deployment. Centrifuge navigation cleanup was confirmed by Mitch in this chat.
+
+**Restore:** Parent local commit `0df2fb1` preserves the prior preview. This change adds a PNG, title-scoped stylesheet, and title page; inserts two catalog cards and a sitemap route; and records the local state in the aim.
+
+## DEC-033: Cover-derived title-page backgrounds (2026-09-29)
+
+**Direction:** Mitch requested colored backgrounds behind the two new covers, matching the treatment used by the other Unruly Editions title pages.
+
+**Change:** Heart of Darkness uses muted brick red `#792c24`; The Island of Dr. Moreau uses deep teal green `#23463f`. Only the title-specific `--plate` values changed. Cover assets, copy, layout, catalog entries, and shared styles remain unchanged.
+
+**Verification:** Computed background colors and absence of horizontal overflow confirmed at 390px and 1440px for both pages. Updated screenshots captured; desktop presentation visually inspected. Local preview only, no deployment or push. Previous state is preserved in parent commit `8f01684`.
+
+## DEC-034: Approved production release of new Editions and Centrifuge navigation (2026-09-29)
+
+**Authorization:** Mitch's exact deployment instruction in this chat: “Approved. Deploy. Sea cucumber.” This same-turn instruction authorizes the production merge. Earlier local-only states in DEC-030 through DEC-033 describe the preview history and are superseded by this release authorization.
+
+**Release scope:** Heart of Darkness and The Island of Dr. Moreau title pages, original supplied cover files, approved copy, In Development labels, matching entries appended to both catalogs, sitemap routes, cover-derived title-page backgrounds, and the confirmed Centrifuge navigation cleanup. No new homepage title promotion, release date, preorder, or signup. The Centrifuge book page and introduction reader remain unchanged.
+
+**Preflight:** Main and live production both at `37bd0820074ffcc58a697b6a5d96db41d8423873`. Local preview approved. Desktop/mobile rendering, exact approved Moreau copy, source cover checksums, navigation, and local links checked in the preceding entries. Production is reached only by squash-merging the release PR, followed by Cloudflare deployment status and live verification.
+
+**Rollback baseline:** Cloudflare production deployment `d1bbc079-3ed5-4735-b391-7387c9aed2d1`, source commit `37bd0820074ffcc58a697b6a5d96db41d8423873`. Source history is retained in a local Git bundle and on Picard before publication.

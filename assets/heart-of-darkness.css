@@ -1,0 +1,7 @@
+/* Title-specific layout uses the existing edition components and palette. */
+.heart-breadcrumb{padding-top:32px}
+.heart-of-darkness{padding-top:24px}
+.heart-of-darkness .edition-plate{--plate:#792c24}
+.heart-copy{margin:28px 0}
+.heart-copy p{font-size:20px;line-height:1.5}
+@media(max-width:800px){.heart-of-darkness .edition-plate{order:-1}}

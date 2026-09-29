@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-09-26
+  updated: 2026-09-29
 
 triples:
   - subject: "tech stack"
@@ -102,7 +102,7 @@ triples:
 
   - subject: "Unruly Editions"
     predicate: "published pages"
-    object: "/editions/ index plus standard-oil, daedalus, mutual-aid, back-to-methuselah; all In preparation"
+    object: "/editions/ index plus standard-oil, daedalus, mutual-aid, back-to-methuselah (In preparation), heart-of-darkness and island-of-dr-moreau (In Development)"
     context: "DEC-024"
 
   - subject: "favicon"
@@ -110,3 +110,18 @@ triples:
     object: "approved offset UC favicon: white U and C, separated, U higher than C, on site red #c63b2e; assets/favicon.svg, favicon-32.png, favicon-192.png, apple-touch-icon.png"
     context: "DEC-029"
 
+
+  - subject: "Heart of Darkness website addition"
+    predicate: "has approved release pages at"
+    object: "/editions/heart-of-darkness/ with matching entries appended to /editions/ and /books/; In Development; deployment authorized 2026-09-29"
+    context: "Mitch explicit build order, 2026-09-29; DEC-030"
+
+  - subject: "Heart of Darkness presentation"
+    predicate: "requires"
+    object: "approved cover unchanged, approved two-paragraph copy, normal catalog weight, no homepage promotion, sequencing, release date, preorder, or signup"
+    context: "Mitch explicit direction, 2026-09-29; DEC-030"
+
+  - subject: "The Island of Dr. Moreau website addition"
+    predicate: "has approved release pages at"
+    object: "/editions/island-of-dr-moreau/ with entries appended to both catalogs, In Development, approved copy and unchanged supplied cover; deployment authorized 2026-09-29"
+    context: "Mitch copy approval in chat, 2026-09-29; DEC-032"

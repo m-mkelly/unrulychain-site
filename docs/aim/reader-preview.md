@@ -9,3 +9,7 @@ This is a preview only. No production merge is authorized. Visual review and the
 ### Approved adjustment trial
 
 Mitch agreed to try five sizes (15, 17, 19, 21 and 23 px), default 17 px, controlled with A− and A+. Above the 800 px mobile breakpoint the reader sits beside a smaller image of the existing book cover. At 800 px and below the cover is hidden and the existing single-reader layout is retained. This remains a preview awaiting review.
+
+### Approved scene composition
+
+Mitch approved replacing the small desktop cover panel with a full-width illustrated excavation scene, title and subtitle on the left, and the existing interactive reader on the right. Use the existing excavation artwork. Preserve the reader's portrait proportions, dimensions and controls; the mockup's squat device was explicitly rejected. Keep the current mobile presentation. This change is authorized for preview only.

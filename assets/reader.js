@@ -4,7 +4,7 @@
   const screen = reader.querySelector('.reader-screen'), flow = reader.querySelector('.reader-flow');
   const current = reader.querySelector('.reader-current'), total = reader.querySelector('.reader-total');
   const back = reader.querySelector('.reader-back'), forward = reader.querySelector('.reader-forward');
-  const enlarge = reader.querySelector('.reader-enlarge'), types = [...reader.querySelectorAll('[data-type]')];
+  const enlarge = reader.querySelector('.reader-enlarge'), types = [...reader.querySelectorAll('[data-size]')];
   const motion = matchMedia('(prefers-reduced-motion: reduce)'), seen = new Set();
   let page = 0, pages = 1, stride = 0, anchor = null, started = false, complete = false;
   let backdrop, placeholder, oldOverflow, inertNodes = [];
@@ -47,20 +47,16 @@
   if (document.fonts) document.fonts.ready.then(measure);
   back.addEventListener('click', () => show(page - 1));
   forward.addEventListener('click', () => show(page + 1));
-  function type(button) {
-    reader.style.setProperty('--reader-text', button.dataset.type === 'large' ? '22px' : (matchMedia('(max-width:800px)').matches ? '17px' : '19px'));
-    types.forEach(item => { item.setAttribute('aria-checked', String(item === button)); item.tabIndex = item === button ? 0 : -1; });
+  const sizes = [15,17,19,21,23];
+  let sizeIndex = 1;
+  types.forEach(button => button.addEventListener('click', () => {
+    sizeIndex = Math.max(0, Math.min(sizes.length - 1, sizeIndex + Number(button.dataset.size)));
+    reader.style.setProperty('--reader-text', sizes[sizeIndex] + 'px');
+    types[0].disabled = sizeIndex === 0;
+    types[1].disabled = sizeIndex === sizes.length - 1;
+    reader.querySelector('.reader-size-status').textContent = 'Text size ' + sizes[sizeIndex] + ' pixels';
     measure();
-  }
-  types.forEach((button, i) => {
-    button.tabIndex = i ? -1 : 0;
-    button.addEventListener('click', () => type(button));
-    button.addEventListener('keydown', e => {
-      if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)) {
-        e.preventDefault(); const next = types[1 - i]; type(next); next.focus();
-      }
-    });
-  });
+  }));
   function close() {
     if (!backdrop) return;
     inertNodes.forEach(([el, value]) => { el.inert = value; }); inertNodes = [];

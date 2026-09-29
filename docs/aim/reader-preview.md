@@ -17,3 +17,7 @@ Mitch approved replacing the small desktop cover panel with a full-width illustr
 ### Release-copy preview
 
 At Mitch's request, preview “Available soon” on the homepage, Centrifuge catalog entry and book page, replacing September publication wording. Homepage and catalog actions link directly to the introduction. The book-page closing paragraph reads “Available soon. Read the introduction below and sign up for publication updates.” The existing publication-update link and form remain. These copy changes await Mitch's visual approval; no purchase availability or release date is promised.
+
+### Production authorization
+
+Mitch approved the complete reader design and available-soon copy and instructed deployment with the required safety word on 2026-09-29 at 11:54 America/New_York. He confirmed excellent functionality on mobile and desktop. ChatGPT verified canonical text with typographic quote normalization, desktop controls and enlargement, unchanged portrait dimensions, and reviewed reduced-motion and scrolling fallbacks. The prior main commit is 9c815366b2d1b553640c406548a56b7be800dad7; reverting this release through a PR restores that source state. No verified prior Cloudflare production deployment ID was accessible in this environment.

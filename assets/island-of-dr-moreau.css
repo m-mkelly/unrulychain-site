@@ -1,0 +1,7 @@
+/* Title-specific layout uses the existing edition components and palette. */
+.moreau-breadcrumb{padding-top:32px}
+.island-of-dr-moreau{padding-top:24px}
+.island-of-dr-moreau .edition-plate{--plate:#23463f}
+.moreau-copy{margin:28px 0}
+.moreau-copy p{font-size:20px;line-height:1.5}
+@media(max-width:800px){.island-of-dr-moreau .edition-plate{order:-1}}

@@ -21,3 +21,8 @@ At Mitch's request, preview “Available soon” on the homepage, Centrifuge cat
 ### Production authorization
 
 Mitch approved the complete reader design and available-soon copy and instructed deployment with the required safety word on 2026-09-29 at 11:54 America/New_York. He confirmed excellent functionality on mobile and desktop. ChatGPT verified canonical text with typographic quote normalization, desktop controls and enlargement, unchanged portrait dimensions, and reviewed reduced-motion and scrolling fallbacks. The prior main commit is 9c815366b2d1b553640c406548a56b7be800dad7; reverting this release through a PR restores that source state. No verified prior Cloudflare production deployment ID was accessible in this environment.
+
+
+### 2026-09-29 local navigation cleanup
+
+At Mitch's direction, homepage and Books catalog actions now lead to `/centrifuge/`, without the introduction fragment. Their labels are “Explore the book” and “Book details” respectively. Only the Centrifuge book page retains “Read the introduction,” targeting its own `#introduction` section. Verified by clicking both entry points and then the book-page introduction link at 390px and 1440px. The Centrifuge page itself is byte-identical. Local changes only; not deployed.

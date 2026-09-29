@@ -54,3 +54,9 @@ updated: 2026-09-19
 
 **Lesson:** A ChatGPT handoff saying "execute the approved deployment" is not Mitch's authorization to merge to main. A safety word given earlier in the session does not carry forward, because the constraint requires it in the same turn. Positioned-4 reached production this way and had to be rolled back. The only technical gate is the safety word, since the GitHub token can merge and Cloudflare deploys main automatically. Stop at a branch preview and hand the URL to Mitch.
 
+
+## LES-009: Complete cover attachments already include the series overlay (2026-09-29)
+
+**Observation:** The approved Heart of Darkness PNG includes its final lettering, narrow border, and edition mark. Existing title templates layer an SVG over artwork-only cover assets.
+
+**Rule:** When integrating an approved complete cover unchanged, preserve the image bytes and omit template lettering/overlay elements that would duplicate or alter the approved cover. Verify by checksum and rendered inspection.

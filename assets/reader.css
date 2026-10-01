@@ -10,7 +10,7 @@
 .reader-scene-rule{display:block;width:180px;height:5px;margin-top:25px;background:var(--red)}
 .reader-size-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .reader-mobile-heading h2{font:900 clamp(42px,5vw,76px)/.9 var(--display);text-transform:uppercase;letter-spacing:-.035em;margin:12px auto 44px;max-width:850px}
-.reader-hero-link{display:inline-block;margin-top:18px;color:var(--red-dark);font:800 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:underline;text-underline-offset:5px}
+.reader-hero-link{display:inline-block;margin-top:18px;color:var(--red-dark);font:800 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:underline;text-underline-offset:5px}.hero-actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:18px}.hero-actions .button,.hero-actions .reader-hero-link{margin:0;white-space:nowrap}
 .reader{--reader-text:17px;--page:0;--gap:28px;position:relative;box-sizing:border-box;width:min(552px,100%);margin:auto;padding:0 22px 19px;color:var(--ink);background:linear-gradient(100deg,#b6b9b2 0%,#f6f5e8 3%,#d6d9d1 11%,#f1eee0 50%,#c9ccc4 89%,#faf7e8 97%,#8d9895 100%);border:2px solid #697475;border-radius:33px 33px 40px 40px;box-shadow:inset 0 0 0 3px #faf9ec,inset 0 -16px 24px #929b9655,0 8px 0 #596261,0 24px 44px #0b111230;text-align:left}
 .reader *{box-sizing:border-box}
 .reader-crown{height:72px;display:flex;align-items:center;justify-content:center;position:relative}

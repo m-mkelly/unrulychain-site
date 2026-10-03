@@ -292,3 +292,8 @@ Mitch approved the Heart of Darkness visual preview with “This looks good.” 
 **Scope:** Copy and structured metadata only. No visual design, pricing, reader, navigation, cover, or Amazon URL changes.
 
 **State:** Branch preview only. No production deployment authorized.
+
+
+### DEC-035 review correction (2026-10-03)
+
+Mitch rejected the first hosted preview because the rendered preview did not consistently show the branch updates on the Centrifuge page and Books catalog, and because combining availability with the Amazon link caused poor mobile wrapping on the homepage. The corrected presentation keeps homepage status to "Available now in paperback and ebook" only. Purchase links remain format-neutral "Buy on Amazon" on the Centrifuge page and Books catalog. The existing Amazon URL is unchanged. Hosted preview must be verified against the latest branch commit before approval. Production remains unauthorized.

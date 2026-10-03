@@ -308,3 +308,12 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Implementation:** Add the full Covenant and a conspicuous permanence notice to `editors-authors.html`; add the concise principle and Covenant link to the homepage imprint section; add a permanent-record explanation and Covenant link to `about.html`; add a light permanence statement to `/books/`; and link the Unruly Editions editorial introduction to the Covenant. The decentralized-record language is expressed as a publication commitment, not as a claim that every existing title page already exposes blockchain metadata. No individual title page, cover, navigation structure, newsletter, pricing, or sales link changes.
 
 **State:** Branch preview only. No production deployment authorized.
+
+
+## DEC-037: Reduce Editors & Authors hero heading scale (2026-10-03)
+
+**Direction:** Mitch requested that the "For editors and authors" heading be reduced in size after reviewing the production page on mobile.
+
+**Implementation:** Scope the change to the Editors & Authors hero only. Set the page hero heading to `clamp(54px,6vw,92px)` on larger layouts and `clamp(36px,10vw,50px)` at 800px and below. No copy, image, spacing, navigation, or other page typography changes.
+
+**State:** Branch preview only. Production deployment remains unauthorized without Mitch's explicit same-turn deploy instruction containing the safety word.

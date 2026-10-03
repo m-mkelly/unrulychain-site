@@ -1,7 +1,7 @@
 ---
 type: aim-lessons
 app: unrulychain-site
-updated: 2026-09-19
+updated: 2026-10-03
 ---
 
 # Unruly Chain Site: Lessons
@@ -60,3 +60,14 @@ updated: 2026-09-19
 **Observation:** The approved Heart of Darkness PNG includes its final lettering, narrow border, and edition mark. Existing title templates layer an SVG over artwork-only cover assets.
 
 **Rule:** When integrating an approved complete cover unchanged, preserve the image bytes and omit template lettering/overlay elements that would duplicate or alter the approved cover. Verify by checksum and rendered inspection.
+
+
+## LES-010: A valid deploy authorization survives tool-call failure (2026-10-03)
+
+**Lesson:** Mitch's same-turn instruction "Approved. Deploy. Sea cucumber." fully authorized the approved production change. A GitHub connector safety block prevented the first merge attempt, but did not invalidate that authorization. Asking Mitch to repeat the safety word was an execution failure.
+
+**Rule:** Once an approved production change has an unambiguous same-turn deploy instruction containing "sea cucumber", execute the deployment. If a tool call fails or is blocked, diagnose and retry the documented operational path. Do not ask for duplicate authorization merely because execution failed.
+
+**Production path:** Squash-merge the approved PR into `main`; Cloudflare Pages automatically deploys pushes to `main`; then verify production.
+
+**Preview discipline:** Every website-update review response must include clickable hosted preview links. Before presenting them, verify the rendered hosted pages for every changed phrase and CTA. Branch source inspection alone is not sufficient.

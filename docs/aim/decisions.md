@@ -281,3 +281,19 @@ Mitch approved the Heart of Darkness visual preview with “This looks good.” 
 **Preflight:** Main and live production both at `37bd0820074ffcc58a697b6a5d96db41d8423873`. Local preview approved. Desktop/mobile rendering, exact approved Moreau copy, source cover checksums, navigation, and local links checked in the preceding entries. Production is reached only by squash-merging the release PR, followed by Cloudflare deployment status and live verification.
 
 **Rollback baseline:** Cloudflare production deployment `d1bbc079-3ed5-4735-b391-7387c9aed2d1`, source commit `37bd0820074ffcc58a697b6a5d96db41d8423873`. Source history is retained in a local Git bundle and on Picard before publication.
+
+
+## DEC-035: Centrifuge paperback availability (2026-10-03)
+
+**Direction:** Mitch confirmed that the existing Amazon product URL now presents both Kindle and Paperback formats on the same listing and directed the website to be updated. Production deployment remains unauthorized until the required safety word is supplied in the same deployment instruction.
+
+**Change:** Keep the existing Amazon URL. Change Centrifuge availability copy on the homepage and book page from ebook-only to "paperback and ebook"; change Amazon calls to action to format-neutral "Buy on Amazon"; change the Books catalog CTA from "Buy ebook on Amazon" to "Buy on Amazon"; and represent both EBook and Paperback in the Centrifuge structured metadata.
+
+**Scope:** Copy and structured metadata only. No visual design, pricing, reader, navigation, cover, or Amazon URL changes.
+
+**State:** Branch preview only. No production deployment authorized.
+
+
+### DEC-035 review correction (2026-10-03)
+
+Mitch rejected the first hosted preview because the rendered preview did not consistently show the branch updates on the Centrifuge page and Books catalog, and because combining availability with the Amazon link caused poor mobile wrapping on the homepage. The corrected presentation keeps homepage status to "Available now in paperback and ebook" only. Purchase links remain format-neutral "Buy on Amazon" on the Centrifuge page and Books catalog. The existing Amazon URL is unchanged. Hosted preview must be verified against the latest branch commit before approval. Production remains unauthorized.

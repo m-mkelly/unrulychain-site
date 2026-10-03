@@ -1,7 +1,7 @@
 ---
 type: aim-decisions
 app: unrulychain-site
-updated: 2026-09-26
+updated: 2026-10-03
 ---
 
 # Unruly Chain Site: Decisions
@@ -297,3 +297,14 @@ Mitch approved the Heart of Darkness visual preview with “This looks good.” 
 ### DEC-035 review correction (2026-10-03)
 
 Mitch rejected the first hosted preview because the rendered preview did not consistently show the branch updates on the Centrifuge page and Books catalog, and because combining availability with the Amazon link caused poor mobile wrapping on the homepage. The corrected presentation keeps homepage status to "Available now in paperback and ebook" only. Purchase links remain format-neutral "Buy on Amazon" on the Centrifuge page and Books catalog. The existing Amazon URL is unchanged. Hosted preview must be verified against the latest branch commit before approval. Production remains unauthorized.
+
+
+## DEC-036: Unruly Publication Covenant and permanent-edition positioning (2026-10-03)
+
+**Direction:** Mitch approved the Unruly Publication Covenant draft and directed that the full Covenant be added to the Editors & Authors page, with selected permanence language on the homepage and elsewhere. Individual book pages are explicitly out of scope for now. Production remains unauthorized without Mitch's explicit same-turn deploy instruction containing the safety word.
+
+**Policy:** Unruly Chain retains absolute discretion before publication. Once an edition is published, the edition becomes part of the historical record and will not be withdrawn because of political, commercial, institutional, legal, reputational, personal, contributor, or publisher pressure. Corrections, annotations, responses, changed conclusions, and later editions are allowed; erasure of the published edition is not. The permanence commitment is separate from perpetual commercial ownership. Authors or other rights holders may control later editions and may direct the permanent title page to an authorized sales link, while Unruly Chain retains the right to sell the edition it published for as long as it lawfully possesses that right.
+
+**Implementation:** Add the full Covenant and a conspicuous permanence notice to `editors-authors.html`; add the concise principle and Covenant link to the homepage imprint section; add a permanent-record explanation and Covenant link to `about.html`; add a light permanence statement to `/books/`; and link the Unruly Editions editorial introduction to the Covenant. The decentralized-record language is expressed as a publication commitment, not as a claim that every existing title page already exposes blockchain metadata. No individual title page, cover, navigation structure, newsletter, pricing, or sales link changes.
+
+**State:** Branch preview only. No production deployment authorized.

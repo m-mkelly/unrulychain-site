@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-09-29
+  updated: 2026-10-03
 
 triples:
   - subject: "tech stack"
@@ -125,3 +125,8 @@ triples:
     predicate: "has approved release pages at"
     object: "/editions/island-of-dr-moreau/ with entries appended to both catalogs, In Development, approved copy and unchanged supplied cover; deployment authorized 2026-09-29"
     context: "Mitch copy approval in chat, 2026-09-29; DEC-032"
+
+  - subject: "Centrifuge availability"
+    predicate: "is"
+    object: "available now in paperback and ebook through the existing Amazon product URL"
+    context: "Mitch confirmation and direction, 2026-10-03; DEC-035"

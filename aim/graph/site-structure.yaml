@@ -130,3 +130,23 @@ triples:
     predicate: "is"
     object: "available now in paperback and ebook through the existing Amazon product URL"
     context: "Mitch confirmation and direction, 2026-10-03; DEC-035"
+
+  - subject: "Publication Covenant"
+    predicate: "lives at"
+    object: "editors-authors.html#publication-covenant; full permanence commitment and contributor notice"
+    context: "Mitch approved covenant and site placement, 2026-10-03"
+
+  - subject: "homepage imprint section"
+    predicate: "states"
+    object: "Publishing should mean published. We do not promise to publish you. If we publish you, we will not erase you."
+    context: "Mitch approved site plan, 2026-10-03"
+
+  - subject: "The Imprint page"
+    predicate: "explains"
+    object: "published-edition permanence, decentralized preservation intent, corrections without erasure, and separation from future commercial rights"
+    context: "Mitch approved policy clarification, 2026-10-03"
+
+  - subject: "Books catalog"
+    predicate: "states"
+    object: "Every Unruly Chain edition becomes part of the permanent record."
+    context: "Mitch approved site plan, 2026-10-03"

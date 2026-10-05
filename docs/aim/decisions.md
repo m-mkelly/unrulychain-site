@@ -328,3 +328,5 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 
 **Deployment:** Branch preview only. Production remains unauthorized without Mitch's explicit same-turn deploy instruction containing the safety word.
 
+**Audit update:** A full pass of every public HTML page and Centrifuge press text found no remaining Centrifuge "forthcoming" or pre-publication copy. The remaining "Forthcoming" label belongs to David E. Norman and is intentional. The press kit ZIP itself still contained the old pre-publication description even after the standalone text file was corrected, so the ZIP was rebuilt from the current press assets and the hard-coded file-size label was removed. The retailer row uses "Buy from" and the full retailer name "Google Play Books."
+

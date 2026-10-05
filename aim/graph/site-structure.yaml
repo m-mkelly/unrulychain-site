@@ -128,7 +128,7 @@ triples:
 
   - subject: "Centrifuge availability"
     predicate: "is"
-    object: "available now in paperback and ebook through the existing Amazon product URL"
+    object: "available now in paperback and ebook; purchase links on /centrifuge/ include Amazon, Apple Books, Google Play Books, and Kobo"
     context: "Mitch confirmation and direction, 2026-10-03; DEC-035"
 
   - subject: "Publication Covenant"

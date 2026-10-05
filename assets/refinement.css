@@ -129,11 +129,11 @@
 .button-download::after{content:none}.button-download span{font-size:18px;line-height:1}.press-text h2{font-size:clamp(30px,3vw,44px);line-height:.95}@media(max-width:800px){.press-text h2{font-size:clamp(26px,7.5vw,36px)}}
 .newsletter .subscribe-err{color:#ff8a7a}
 
-/* Centrifuge retailer hub */
-.purchase-strip{scroll-margin-top:120px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-soft)}
-.purchase-strip-inner{display:flex;align-items:center;gap:28px}
-.purchase-strip .eyebrow{margin:0;white-space:nowrap}
-.purchase-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px}
-.purchase-links a{font:800 11px var(--sans);text-transform:uppercase;letter-spacing:.14em;border-bottom:1px solid var(--ink);padding-bottom:4px;transition:color .18s ease,border-color .18s ease}
-.purchase-links a:hover{color:var(--red);border-color:var(--red)}
-@media(max-width:800px){.purchase-strip{padding:18px 0}.purchase-strip-inner{display:block}.purchase-strip .eyebrow{margin-bottom:12px}.purchase-links{gap:12px 20px}}
+/* Centrifuge retailer links: compact and integrated with the title hero. */
+.original-title .retailer-options{scroll-margin-top:120px;display:flex;flex-wrap:wrap;align-items:baseline;gap:7px 16px;margin:12px 0 0;max-width:680px}
+.original-title .retailer-label{font:800 10px var(--sans);text-transform:uppercase;letter-spacing:.22em;color:var(--red)}
+.original-title .retailer-options a{font:800 10px var(--sans);text-transform:uppercase;letter-spacing:.12em;color:var(--ink);border-bottom:1px solid transparent;padding-bottom:2px;transition:color .18s ease,border-color .18s ease}
+.original-title .retailer-options a:hover{color:var(--red);border-color:var(--red)}
+.original-title .retailer-options a+a::before{content:"·";display:inline-block;margin-right:16px;color:var(--line);pointer-events:none}
+.original-title .retailer-options+.reader-hero-link{margin-top:15px}
+@media(max-width:800px){.original-title .retailer-options{gap:9px 12px}.original-title .retailer-options a+a::before{margin-right:12px}.original-title .retailer-options+.reader-hero-link{margin-top:16px}}

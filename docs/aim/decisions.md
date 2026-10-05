@@ -317,3 +317,16 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Implementation:** Scope the change to the Editors & Authors hero only. Set the page hero heading to `clamp(54px,6vw,92px)` on larger layouts and `clamp(36px,10vw,50px)` at 800px and below. No copy, image, spacing, navigation, or other page typography changes.
 
 **State:** Branch preview only. Production deployment remains unauthorized without Mitch's explicit same-turn deploy instruction containing the safety word.
+
+## DEC-038: Centrifuge retailer hub and publication-state cleanup (2026-10-05)
+
+**Direction:** Mitch directed the site to add the confirmed Centrifuge seller links, review the entire website for stale pre-publication language, and present a hosted preview before any production deployment.
+
+**Retailers:** The Centrifuge title page links to Amazon, Apple Books, Google Play Books, and Kobo. The Books catalog remains compact and routes its purchase CTA to the title-page retailer hub instead of presenting Amazon as the sole seller.
+
+**Publication cleanup:** The Press page and the downloadable Centrifuge description resource now state that the book was published September 29, 2026. The Centrifuge structured metadata uses the same publication date and lists all four confirmed retailer offers. The remaining “Forthcoming” label on the Authors page refers to David E. Norman and is intentional.
+
+**Deployment:** Branch preview only. Production remains unauthorized without Mitch's explicit same-turn deploy instruction containing the safety word.
+
+**Audit update:** A full pass of every public HTML page and Centrifuge press text found no remaining Centrifuge "forthcoming" or pre-publication copy. The remaining "Forthcoming" label belongs to David E. Norman and is intentional. The press kit ZIP itself still contained the old pre-publication description even after the standalone text file was corrected, so the ZIP was rebuilt from the current press assets and the hard-coded file-size label was removed. The retailer row uses "Buy from" and the full retailer name "Google Play Books."
+

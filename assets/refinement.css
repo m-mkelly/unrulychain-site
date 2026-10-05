@@ -128,3 +128,12 @@
 .press-images{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-end;margin:18px 0 22px}.press-images figure{margin:0;flex:0 1 160px;min-width:0}.press-images figure+figure{flex-basis:180px}.press-images a{display:block}.press-images img{display:block;width:100%;height:auto;box-shadow:8px 10px 18px #0003}.press-images figcaption{margin-top:10px;font-family:var(--sans);font-size:11px;letter-spacing:.08em;text-transform:uppercase}.press-text{display:grid;grid-template-columns:1fr 1fr;gap:56px}.press-text p{max-width:62ch}@media(max-width:800px){.press-images figure{flex-basis:120px}.press-images figure+figure{flex-basis:135px}.press-text{display:block}.press-text>div+div{margin-top:40px}}
 .button-download::after{content:none}.button-download span{font-size:18px;line-height:1}.press-text h2{font-size:clamp(30px,3vw,44px);line-height:.95}@media(max-width:800px){.press-text h2{font-size:clamp(26px,7.5vw,36px)}}
 .newsletter .subscribe-err{color:#ff8a7a}
+
+/* Centrifuge retailer links: compact and integrated with the title hero. */
+.original-title .retailer-options{scroll-margin-top:120px;display:flex;flex-wrap:wrap;align-items:baseline;gap:7px 16px;margin:12px 0 0;max-width:680px}
+.original-title .retailer-label{font:800 10px var(--sans);text-transform:uppercase;letter-spacing:.22em;color:var(--ink)}
+.original-title .retailer-options a{font:800 10px var(--sans);text-transform:uppercase;letter-spacing:.12em;color:var(--ink);border-bottom:1px solid transparent;padding-bottom:2px;transition:color .18s ease,border-color .18s ease}
+.original-title .retailer-options a:hover{color:var(--red);border-color:var(--red)}
+.original-title .retailer-options a+a::before{content:"·";display:inline-block;margin-right:16px;color:var(--line);pointer-events:none}
+.original-title .retailer-options+.reader-hero-link{margin-top:15px}
+@media(max-width:800px){.original-title .retailer-options{gap:9px 12px}.original-title .retailer-options a+a::before{margin-right:12px}.original-title .retailer-options+.reader-hero-link{margin-top:16px}}

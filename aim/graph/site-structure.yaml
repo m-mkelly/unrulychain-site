@@ -128,7 +128,7 @@ triples:
 
   - subject: "Centrifuge availability"
     predicate: "is"
-    object: "available now in paperback and ebook through the existing Amazon product URL"
+    object: "available now in paperback and ebook; purchase links on /centrifuge/ include Amazon, Apple Books, Google Play Books, and Kobo"
     context: "Mitch confirmation and direction, 2026-10-03; DEC-035"
 
   - subject: "Publication Covenant"
@@ -150,3 +150,13 @@ triples:
     predicate: "states"
     object: "Every Unruly Chain edition becomes part of the permanent record."
     context: "Mitch approved site plan, 2026-10-03"
+  - subject: "Centrifuge retailer links"
+    predicate: "are"
+    object: "Amazon, Apple Books, Google Play Books, and Kobo on /centrifuge/; the Books catalog routes its purchase CTA to that retailer hub"
+    context: "Mitch direction, 2026-10-05"
+
+  - subject: "Centrifuge publication date"
+    predicate: "is"
+    object: "September 29, 2026; stale pre-publication wording is removed from the Press page and press description resource"
+    context: "IngramSpark publication date and Mitch direction, 2026-10-05"
+

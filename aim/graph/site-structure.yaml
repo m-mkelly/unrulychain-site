@@ -163,5 +163,5 @@ triples:
 
   - subject: "book title social previews"
     predicate: "use"
-    object: "the current title-specific cover asset on all eight book/title pages; original-title previews use the current hardcover-render assets, and all Unruly Edition title pages expose their current cover through Open Graph and Twitter metadata"
+    object: "the current title-specific cover asset on all eight book/title pages; original-title preview URLs are versioned when cover bytes change so social caches cannot retain superseded art, and all Unruly Edition title pages expose their current cover through Open Graph and Twitter metadata"
     context: "Mitch direction, 2026-10-06; social preview audit"

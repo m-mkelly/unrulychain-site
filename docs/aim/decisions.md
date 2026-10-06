@@ -330,3 +330,18 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 
 **Audit update:** A full pass of every public HTML page and Centrifuge press text found no remaining Centrifuge "forthcoming" or pre-publication copy. The remaining "Forthcoming" label belongs to David E. Norman and is intentional. The press kit ZIP itself still contained the old pre-publication description even after the standalone text file was corrected, so the ZIP was rebuilt from the current press assets and the hard-coded file-size label was removed. The retailer row uses "Buy from" and the full retailer name "Google Play Books."
 
+
+
+## DEC-039: Normalize book social preview images (2026-10-06)
+
+**Direction:** Mitch identified that the Centrifuge link card was showing an obsolete cover and directed a full-code audit for similar problems and repair of all of them.
+
+**Root cause:** The live Centrifuge Open Graph metadata already pointed to `assets/cover-centrifuge.jpg`, and that file now contains the approved river/whirlpool cover. The obsolete preview was therefore not caused by the current HTML selecting the wrong art. The cover file had previously been replaced in place under the same public URL, and Substack was still using an older cached representation of that URL. The same cache risk exists for Last Old Man because its final flat cover was also installed under an existing filename.
+
+**Audit:** Every public HTML page was inspected for social metadata and title-cover references. Centrifuge and Last Old Man were the only existing title pages with image metadata. All six Unruly Edition title pages had current on-page cover assets but no Open Graph or Twitter image metadata. General site, catalog, author, imprint, press, privacy, and Editors & Authors pages contained no stale title-image metadata.
+
+**Change:** Centrifuge keeps the approved flat cover as its social image but now references `https://unrulychain.com/assets/cover-centrifuge.jpg?v=20261006` for both `og:image` and `twitter:image`, forcing a new social-preview URL without changing the visible site asset. Last Old Man uses the same versioned-URL treatment for `cover-last-old-man.jpg` and now has complete Twitter title, description, and image metadata. Each Unruly Edition title page now exposes its existing current cover through `og:image`, `og:image:alt`, `twitter:card`, `twitter:title`, `twitter:description`, and `twitter:image`. Future replacement of cover bytes under an existing filename requires bumping the social-image URL version at the same time.
+
+**Scope:** No body copy, layout, navigation, analytics, subscription behavior, or image files changed.
+
+**State:** Branch preview only. Production deployment remains unauthorized without Mitch's explicit same-turn deploy instruction containing the safety word.

@@ -160,3 +160,8 @@ triples:
     object: "September 29, 2026; stale pre-publication wording is removed from the Press page and press description resource"
     context: "IngramSpark publication date and Mitch direction, 2026-10-05"
 
+
+  - subject: "book title social previews"
+    predicate: "use"
+    object: "the current title-specific cover asset on all eight book/title pages; original-title preview URLs are versioned when cover bytes change so social caches cannot retain superseded art, and all Unruly Edition title pages expose their current cover through Open Graph and Twitter metadata"
+    context: "Mitch direction, 2026-10-06; social preview audit"

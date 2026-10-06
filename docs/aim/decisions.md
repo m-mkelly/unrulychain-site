@@ -330,3 +330,14 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 
 **Audit update:** A full pass of every public HTML page and Centrifuge press text found no remaining Centrifuge "forthcoming" or pre-publication copy. The remaining "Forthcoming" label belongs to David E. Norman and is intentional. The press kit ZIP itself still contained the old pre-publication description even after the standalone text file was corrected, so the ZIP was rebuilt from the current press assets and the hard-coded file-size label was removed. The retailer row uses "Buy from" and the full retailer name "Google Play Books."
 
+
+
+## DEC-039: Normalize book social preview images (2026-10-06)
+
+**Direction:** Mitch identified that the Centrifuge link card was showing an obsolete cover and directed a full-code audit for similar problems and repair of all of them.
+
+**Audit:** Every public HTML page was inspected for social metadata and title-cover references. The two original-book pages had social preview metadata that pointed to flat cover assets while their current title presentation uses the hardcover-render assets. All six Unruly Edition title pages had current on-page cover assets but no Open Graph or Twitter image metadata. General site, catalog, author, imprint, press, privacy, and Editors & Authors pages did not contain stale title-image metadata.
+
+**Change:** Centrifuge now uses `assets/cover-centrifuge-book.jpg` for both `og:image` and `twitter:image`. Last Old Man now uses `assets/cover-last-old-man-book.jpg` for `og:image`, and its Twitter metadata is completed with title, description, and image. Each Unruly Edition title page now exposes its existing current cover through `og:image`, `og:image:alt`, `twitter:card`, `twitter:title`, `twitter:description`, and `twitter:image`. No body copy, layout, navigation, analytics, subscription behavior, or image files changed.
+
+**State:** Branch preview only. Production deployment remains unauthorized without Mitch's explicit same-turn deploy instruction containing the safety word.

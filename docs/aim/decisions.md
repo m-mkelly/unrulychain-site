@@ -359,4 +359,8 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 
 **Restore baseline:** Main `7784f873c4536fb87c6a0ac4a394c4b29992ba90`, production deployment `661cb320-9c65-474e-83ae-e7ec02ca4fec`. The branch can be discarded before approval; after any separately authorized release, reverting this change through a PR restores the prior reader. Source is retained in GitHub and a Git bundle on Picard.
 
-**State:** Preview only; production approval remains pending. Hosted preview must be verified at this exact branch head before review.
+**Approved preview:** Cloudflare deployment `10170353-d8f7-4edb-bff0-b058380fb121`, head `24c7e65b229f6cd8899c313a94d3529d71db5d79`. Hosted source matches the branch byte-for-byte. All 57 text blocks match the final EPUB; mobile/desktop control checks and all site-helper checks passed.
+
+**Production authorization (2026-10-10):** Mitch explicitly instructed: “Approved. Deploy. Sea cucumber.” This authorizes squash-merging PR #22 and its automatic Cloudflare Pages production deployment. This release record changes only aim documentation after the approved preview; the reviewed reader HTML, CSS and JavaScript are unchanged. Live deployment identifiers and verification are recorded in the PR release record and Picard backup directory after deployment.
+
+**Reader context:** Mitch notes that Amazon's sample also includes Chapters 1 through 4. The on-site excerpt is an invitation to read, not an exclusive sample. No claim of exclusivity is added.

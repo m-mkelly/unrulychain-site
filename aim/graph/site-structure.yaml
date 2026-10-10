@@ -170,4 +170,4 @@ triples:
   - subject: "Centrifuge simulated ebook reader"
     predicate: "serves"
     object: "Complete Chapter 1, The Encounter, from the final published EPUB, in the existing /centrifuge/#introduction reader; the legacy fragment, layout, navigation, five text sizes, enlargement and end card remain"
-    context: "Mitch explicit direction, 2026-10-10; DEC-040; branch preview pending production approval"
+    context: "Mitch explicit direction, 2026-10-10; DEC-040; production release explicitly authorized 2026-10-10"

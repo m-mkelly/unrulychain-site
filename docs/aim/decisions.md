@@ -1,7 +1,7 @@
 ---
 type: aim-decisions
 app: unrulychain-site
-updated: 2026-10-03
+updated: 2026-10-10
 ---
 
 # Unruly Chain Site: Decisions
@@ -345,3 +345,18 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Scope:** No body copy, layout, navigation, analytics, subscription behavior, or image files changed.
 
 **State:** Branch preview only. Production deployment remains unauthorized without Mitch's explicit same-turn deploy instruction containing the safety word.
+
+
+## DEC-040: Complete Chapter 1 in the existing Centrifuge reader (2026-10-10)
+
+**Direction:** Replace the introduction inside the existing simulated ebook reader with complete Chapter 1 of the final published edition. Do not create a separate page or reading experience. Preserve controls and navigation, verify desktop/mobile, and provide a hosted preview. Mitch corrected the requested preview host to the site's existing Cloudflare Pages service. Production is not authorized.
+
+**Source:** Final published EPUB, SHA-256 `dcae23aef965149ab6d51acbda35bf85861a8cbe0314f1ce48d57d1aeaf22e8e`, package modified 2026-09-29. Extract `EPUB/ch01-the-encounter.xhtml` directly. All 49 prose paragraphs, six subsection headings, chapter number/title, punctuation, paragraph IDs and both bold terms are preserved verbatim. The chapter contains no links or footnotes. Heading levels adapt to the containing web page (h1/h2 become h3/h4); two scoped CSS rules render subsection italics and the chapter number using the existing reader fonts.
+
+**Changes:** `centrifuge/index.html` replaces the introduction excerpt and labels its entry points “Read Chapter 1.” The existing `#introduction` fragment remains for compatibility with already-shared reader links. The title card, closing card, controls, reader JavaScript, book-page retailer URLs, homepage and Books catalog routes remain unchanged. `assets/reader.css` receives only the two scoped formatting rules; its URL version changes to invalidate cached CSS. No new route, dependency or build step.
+
+**Verification:** Exact sequential comparison of all 57 source blocks against browser DOM, including text and IDs; 49 prose paragraphs, six subheadings and two strong spans. Chromium at 320, 390, 800, 1050 and 1440px, each at 15/17/19/21/23px text: all content fits the screen vertically, no page overflow, font and navigation limits work. Enlargement/close, keyboard Home/End, end-card newsletter navigation, no-JavaScript scrolling at 390/1440px, ten same-origin link targets, and homepage/catalog entry clicks pass. Mobile, desktop and enlarged reader screenshots inspected. Amazon, Apple Books and Google Play return 200. Kobo returns 403 to automated requests; its confirmed existing URL is unchanged. No subscription or purchase submitted.
+
+**Restore baseline:** Main `7784f873c4536fb87c6a0ac4a394c4b29992ba90`, production deployment `661cb320-9c65-474e-83ae-e7ec02ca4fec`. The branch can be discarded before approval; after any separately authorized release, reverting this change through a PR restores the prior reader. Source is retained in GitHub and a Git bundle on Picard.
+
+**State:** Preview only; production approval remains pending. Hosted preview must be verified at this exact branch head before review.

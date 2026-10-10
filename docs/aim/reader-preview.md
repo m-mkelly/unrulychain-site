@@ -26,3 +26,8 @@ Mitch approved the complete reader design and available-soon copy and instructed
 ### 2026-09-29 local navigation cleanup
 
 At Mitch's direction, homepage and Books catalog actions now lead to `/centrifuge/`, without the introduction fragment. Their labels are “Explore the book” and “Book details” respectively. Only the Centrifuge book page retains “Read the introduction,” targeting its own `#introduction` section. Verified by clicking both entry points and then the book-page introduction link at 390px and 1440px. The Centrifuge page itself is byte-identical. Local changes only; not deployed.
+
+
+### 2026-10-10 Chapter 1 preview
+
+The existing reader now presents complete Chapter 1, “The Encounter,” from the checksum-verified final published EPUB (see DEC-040). This supersedes the introduction excerpt and earlier introduction-source hash above. The legacy `/centrifuge/#introduction` entry point is retained; visible labels read “Read Chapter 1.” No separate chapter page exists. The portrait device, page controls, five text sizes, enlargement, title/end cards and JavaScript remain unchanged. Six italic subsection headings and the chapter number use the current reader typography. Preview only, awaiting review and explicit production authorization.

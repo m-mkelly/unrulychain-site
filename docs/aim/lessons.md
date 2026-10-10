@@ -1,7 +1,7 @@
 ---
 type: aim-lessons
 app: unrulychain-site
-updated: 2026-10-03
+updated: 2026-10-10
 ---
 
 # Unruly Chain Site: Lessons
@@ -71,3 +71,10 @@ updated: 2026-10-03
 **Production path:** Squash-merge the approved PR into `main`; Cloudflare Pages automatically deploys pushes to `main`; then verify production.
 
 **Preview discipline:** Every website-update review response must include clickable hosted preview links. Before presenting them, verify the rendered hosted pages for every changed phrase and CTA. Branch source inspection alone is not sufficient.
+
+
+## LES-011: Published excerpts come from the verified release EPUB (2026-10-10)
+
+**Observation:** The final published EPUB identifies the precise Chapter 1 text and formatting independently of earlier manuscript and introduction-reader sources.
+
+**Rule:** Hash-verify the release EPUB, extract the requested chapter directly, and compare every text block with the rendered reader. Preserve legacy reader fragments when changing excerpt content so existing links keep working. Use the site's established Cloudflare Pages preview process.

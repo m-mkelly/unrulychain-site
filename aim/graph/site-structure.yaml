@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-10-03
+  updated: 2026-10-10
 
 triples:
   - subject: "tech stack"
@@ -165,3 +165,9 @@ triples:
     predicate: "use"
     object: "the current title-specific cover asset on all eight book/title pages; original-title preview URLs are versioned when cover bytes change so social caches cannot retain superseded art, and all Unruly Edition title pages expose their current cover through Open Graph and Twitter metadata"
     context: "Mitch direction, 2026-10-06; social preview audit"
+
+
+  - subject: "Centrifuge simulated ebook reader"
+    predicate: "serves"
+    object: "Complete Chapter 1, The Encounter, from the final published EPUB, in the existing /centrifuge/#introduction reader; the legacy fragment, layout, navigation, five text sizes, enlargement and end card remain"
+    context: "Mitch explicit direction, 2026-10-10; DEC-040; production release explicitly authorized 2026-10-10"

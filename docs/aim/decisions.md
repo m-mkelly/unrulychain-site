@@ -397,3 +397,12 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Scope:** Only the Amanda Kelly author profile on author.html changes. Both biography paragraphs are verbatim from Mitch. Her linked editor credit for The Prince and both Cabin Pressure Ask Substack links remain. The requested co-founder statement is placed in the Authors biography, consistent with the site rule that M&M Kelly LLC may appear only in the author bio. All other pages and site components remain as previously previewed.
 
 **Status:** Feature-branch preview only, awaiting review. Production remains unchanged. Discarding the branch restores the prior state.
+
+
+## DEC-044: Amanda Kelly portrait and Substack name (2026-10-11)
+
+**Direction:** Use the user-supplied Amanda Kelly headshot as a grayscale photograph on the Authors page, and display her Substack's correct publication title “Cabin Pressure” instead of “Cabin Pressure Ask.” Preserve the existing Substack URL https://cabinpressureask.substack.com/ and the previously approved biography, Prince credit and other links.
+
+**Implementation:** Convert the original uploaded 2048x1378 JPEG to faithful grayscale, portrait-cropped and resized to 800x960; no AI regeneration. Original SHA-256: 5ed80f1486b33f34c10f5cb0b35aa31bc72d48e4d41bd00ff30d040c8072b848. Published web asset SHA-256: 2a41dd472bc42e21990b23923aa448ebe2af62541f960343269342587109e00d. Asset path assets/amanda-kelly-bw.jpg. Amanda's profile uses the site's pre-existing author-layout and author-photo responsive classes, matching the established first author listing. Change the visible text of the existing Cabin Pressure link only.
+
+**State:** Preview branch PR #23, no main merge or production release authorized. Other pages unchanged.

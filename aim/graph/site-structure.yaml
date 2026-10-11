@@ -196,3 +196,13 @@ triples:
     predicate: "includes"
     object: "Mitch's approved two-paragraph biography and italic Flight Attendant Who Started Reading the Research subtitle; Prince credit and Cabin Pressure Ask links retained"
     context: "Mitch direction 2026-10-11; DEC-043"
+
+  - subject: "Amanda Kelly author entry image"
+    predicate: "uses"
+    object: "grayscale derivative of Amanda's approved headshot at assets/amanda-kelly-bw.jpg, with the existing responsive author photo layout"
+    context: "Mitch direction 2026-10-11; DEC-044"
+
+  - subject: "Amanda Kelly Substack"
+    predicate: "is labeled"
+    object: "Cabin Pressure; retains the cabinpressureask.substack.com destination"
+    context: "Mitch correction 2026-10-11; DEC-044"

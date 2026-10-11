@@ -386,3 +386,5 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Artwork provenance:** Prince approved complete-cover original SHA-256 53c41c982e3dddc59f7a66e6c13acee16f60c43fc489b53b47df9df3da42dae7 (1024×1536 PNG). The site serves a faithful 800×1200 JPEG derivative (SHA-256 9272e61818029b84163120af30c1c6fd2aef53af4a06f84bd41b6af98cb8b96c), without redrawing the border, logo or cover artwork.
 
 **State:** Preview only. Production remains at main until an explicit separately authorized merge. Rollback before approval is closing PR #23 and deleting its branch; no published site files have changed.
+
+**Preview audit correction:** Removed a stale stylesheet reference inherited from the Moreau template on The Prince title page; all Prince styling uses the existing shared CSS. The paired Tarbell catalog covers now link directly to their respective volume anchors on the shared title page.

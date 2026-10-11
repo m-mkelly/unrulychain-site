@@ -433,3 +433,12 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Change:** In `books/index.html` only, replace the two separate Tarbell catalog cards with the exact `tarbell-pair` article copied from `editions/index.html` (one title, both covers side by side, existing author/editor, one availability line, and individual volume links). Load the existing, unchanged `assets/tarbell-pair.css`. Leave the approved Unruly Editions collection layout, The Prince, remaining catalog entries, Standard Oil title page, Amanda Kelly bio and all other pages untouched.
 
 **Status:** PR #23 preview branch only. Production remains unchanged pending Mitch's explicit authorization. Verify the hosted Books catalog and other affected routes before requesting approval.
+
+
+## DEC-048: Correct Tarbell presentation on both catalog pages (2026-10-11)
+
+**Direction:** Mitch rejected the redundant main Books page rendering and the attempted remedy that copied the single paired Unruly Editions feature into the Books catalog. Revert to the original distinct treatment: one combined title showing both covers on /editions/, and two separate volume listings on /books/ without repeating the long title and descriptive text.
+
+**Change:** In /books/, a single shared heading presents the full work title, Ida M. Tarbell, Mitch Kelly's editor credit, and October 2026 release state. Beneath it, two standard catalog cards display each approved cover and a short Volume I / Volume II label, linking to the corresponding volume anchors. These are separate entries, not a duplicated long-title pair or a copied full-width feature. Scoped stylesheet assets/tarbell-books.css controls this grouping. In /editions/, keep the existing combined two-cover Tarbell entry and correct an accidental duplicated “The collection” eyebrow/heading. The Prince remains in the current catalog, no change to its title page, author biography, other books, or production.
+
+**Status:** Review branch PR #23 only, no merge to main or production deployment. Test both catalog pages in desktop and mobile preview before approval.

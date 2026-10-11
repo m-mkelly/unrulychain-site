@@ -216,3 +216,8 @@ triples:
     predicate: "reuses"
     object: "exact full-width two-cover Tarbell module from Unruly Editions listing, one shared title and copy; other titles retain standard cards"
     context: "Mitch direction 2026-10-11; DEC-047"
+
+  - subject: "Books catalog Tarbell correction"
+    predicate: "uses"
+    object: "one shared Tarbell title/date/editor header and two separate concise Volume I and Volume II cards with individual covers and links; no duplicated long titles"
+    context: "Mitch direction 2026-10-11; DEC-048"

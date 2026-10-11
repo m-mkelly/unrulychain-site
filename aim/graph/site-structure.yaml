@@ -211,3 +211,8 @@ triples:
     predicate: "states"
     object: "Amanda has a B.A. in Theater Arts from The University of Massachusetts, Boston."
     context: "Mitch direction 2026-10-11; DEC-046"
+
+  - subject: "Books catalog Standard Oil treatment"
+    predicate: "reuses"
+    object: "exact full-width two-cover Tarbell module from Unruly Editions listing, one shared title and copy; other titles retain standard cards"
+    context: "Mitch direction 2026-10-11; DEC-047"

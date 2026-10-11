@@ -424,3 +424,12 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Direction:** Mitch requested one additional sentence in Amanda's existing author biography: “Amanda has a B.A. in Theater Arts from The University of Massachusetts, Boston.”
 
 **Scope:** Add that sentence as its own paragraph after Amanda's two previously approved biographical paragraphs and before her Prince editor credit. Preserve her grayscale portrait, existing typography, links, and all other preview pages unchanged. No production deployment authorized.
+
+
+## DEC-047: Reuse approved paired-cover listing in Books catalog (2026-10-11)
+
+**Direction:** Mitch rejected the Books catalog rendering with two duplicate, oversized full-title Tarbell cards. The approved paired-cover listing on the Unruly Editions page is the established design; reuse it exactly rather than inventing a new compact or grouped design.
+
+**Change:** In `books/index.html` only, replace the two separate Tarbell catalog cards with the exact `tarbell-pair` article copied from `editions/index.html` (one title, both covers side by side, existing author/editor, one availability line, and individual volume links). Load the existing, unchanged `assets/tarbell-pair.css`. Leave the approved Unruly Editions collection layout, The Prince, remaining catalog entries, Standard Oil title page, Amanda Kelly bio and all other pages untouched.
+
+**Status:** PR #23 preview branch only. Production remains unchanged pending Mitch's explicit authorization. Verify the hosted Books catalog and other affected routes before requesting approval.

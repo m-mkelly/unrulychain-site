@@ -181,12 +181,13 @@ async def browser_checks(base, paths):
             await page.locator('.reader-back').click()
             require(int(await page.locator('.reader-current').inner_text())==1,'Reader previous page failed')
             await page.locator('.reader-type button').last.click()
-            require('19 pixels' in await page.locator('.reader-size-status').inner_text(),'Reader text size failed')
+            rendered_size = await page.locator('.reader-flow').evaluate('(e) => getComputedStyle(e).fontSize')
+            require(rendered_size == '19px', 'Reader computed text size: ' + rendered_size)
             await page.locator('.reader-enlarge').click()
             require(await page.locator('.reader.is-enlarged').count()==1,'Reader enlarge failed')
             await page.keyboard.press('Escape')
             require(await page.locator('.reader.is-enlarged').count()==0,'Reader close failed')
-            REPORT['navigation'].append({'width':width,'readerControls':'next, previous, size, enlarge, close'})
+            REPORT['navigation'].append({'width':width,'readerControls':'next, previous, size, enlarge, close','computedFontSize':rendered_size})
         await browser.close()
 
 def main():

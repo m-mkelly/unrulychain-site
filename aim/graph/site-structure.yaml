@@ -206,3 +206,8 @@ triples:
     predicate: "is labeled"
     object: "Cabin Pressure; retains the cabinpressureask.substack.com destination"
     context: "Mitch correction 2026-10-11; DEC-044"
+
+  - subject: "Amanda Kelly Authors biography"
+    predicate: "states"
+    object: "Amanda has a B.A. in Theater Arts from The University of Massachusetts, Boston."
+    context: "Mitch direction 2026-10-11; DEC-046"

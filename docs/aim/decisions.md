@@ -417,3 +417,10 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Verification:** Chromium before/after reproduction with the exact 800 × 960 grayscale photo and author layout at 320, 390, 800, 890, and 1440 CSS pixels. Before: rendered photo height 960px at every size. After: rendered photo is 200 × 240px desktop and 160 × 192px mobile, the text remains inside its grid column, and document scrollWidth matches viewport width at every tested size. Inspection of local rendered desktop and mobile screenshots confirms undistorted proportions and wrapped paragraphs.
 
 **Deployment state:** PR #23 preview only. No production deployment or merge authorized; the prior site remains on main.
+
+
+## DEC-046: Amanda Kelly educational credential on Authors page (2026-10-11)
+
+**Direction:** Mitch requested one additional sentence in Amanda's existing author biography: “Amanda has a B.A. in Theater Arts from The University of Massachusetts, Boston.”
+
+**Scope:** Add that sentence as its own paragraph after Amanda's two previously approved biographical paragraphs and before her Prince editor credit. Preserve her grayscale portrait, existing typography, links, and all other preview pages unchanged. No production deployment authorized.

@@ -1,14 +1,14 @@
 name: unrulychain-site
 version: 1
 bundle_format: "0.1"
-updated: "2026-09-10"
+updated: "2026-10-11"
 description: "Unruly Chain publishing imprint website (unrulychain.com). Static HTML/CSS/JS, Cloudflare Pages, no framework, no build step."
 
 summoning_protocol:
   - step: 1
     action: "Load all files in load_order into context"
   - step: 2
-    action: "Verify constraints from aim/graph/constraints.yaml are internalized before writing any HTML, CSS, or visible copy"
+    action: "Verify constraints from aim/graph/constraints.yaml and the latest explicit catalog contract before writing any HTML, CSS, or visible copy"
   - step: 3
     action: "Report the current load state (which graph domains loaded, any files missing) before proceeding"
 
@@ -24,9 +24,11 @@ load_order:
   - path: aim/graph/constraints.yaml
     role: "Hard rules enforced on every change"
   - path: docs/aim/decisions.md
-    role: "Design rationale log"
+    role: "Design rationale log; rejected Tarbell interpretations are superseded by DEC-049"
   - path: docs/aim/lessons.md
     role: "Operational lessons learned"
+  - path: docs/aim/catalog-contract-20261011.md
+    role: "DEC-049: current authoritative route contract from Mitch; unified catalog listings, separate volume listings only on the Standard Oil detail page; accepted Authors content preserved"
 
 capabilities:
   - "Enforce brand identity constraints (not an AI publisher, not a science-only publisher, not a consulting brand)"
@@ -36,9 +38,10 @@ capabilities:
   - "Enforce design familiarity with mandmkelly.com without imitation"
 
 anti_patterns:
-  - "Committing to main or merging PRs without the safety word"
+  - "Committing to main or merging PRs without the required same-turn authorization"
   - "Using AI cliches in visual design (robots, brains, circuits, glowing heads, neural networks)"
   - "Reinterpreting Unruly Chain as an AI-specific or science-only brand"
-  - "Using a framework, build step, or external dependencies"
+  - "Using a framework, build step, or external runtime dependency"
   - "Treating ChatGPT design documents as authoritative sources for aim triples"
   - "Using em dashes in visible copy"
+  - "Confusing the complete Books catalog at /books/ with the Standard Oil detail page at /editions/standard-oil/"

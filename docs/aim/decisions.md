@@ -364,3 +364,12 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Production authorization (2026-10-10):** Mitch explicitly instructed: “Approved. Deploy. Sea cucumber.” This authorizes squash-merging PR #22 and its automatic Cloudflare Pages production deployment. This release record changes only aim documentation after the approved preview; the reviewed reader HTML, CSS and JavaScript are unchanged. Live deployment identifiers and verification are recorded in the PR release record and Picard backup directory after deployment.
 
 **Reader context:** Mitch notes that Amazon's sample also includes Chapters 1 through 4. The on-site excerpt is an invitation to read, not an exclusive sample. No claim of exclusivity is added.
+
+
+## DEC-041: Tarbell paired-volume Unruly Editions catalog preview (2026-10-11)
+
+**Direction:** Display The History of the Standard Oil Company as one title in two volumes on /editions/. Show the two independently approved final covers side by side, with one title, byline, shared description, and the release status “Available October 2026”. Use a full-width featured entry while leaving the remaining single-title cards untouched.
+
+**Implementation:** Replace only the first Tarbell catalog card in editions/index.html; add a page-scoped responsive stylesheet assets/tarbell-pair.css and two 800x1200 web-ready JPEG derivatives made from the approved full Volume I and Volume II covers. Rename the collection-section heading from “In preparation” to “The collection”. Existing title details page, Books catalog, footer and other edition entries are unchanged.
+
+**State:** Feature-branch preview only. No production merge or deployment authorized. Existing production main baseline a31d60d12cf4983c806cf9f1215e4174b5561164. Discarding the branch returns to the prior state.

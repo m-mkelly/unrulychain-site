@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-10-10
+  updated: 2026-10-11
 
 triples:
   - subject: "tech stack"
@@ -171,3 +171,8 @@ triples:
     predicate: "serves"
     object: "Complete Chapter 1, The Encounter, from the final published EPUB, in the existing /centrifuge/#introduction reader; the legacy fragment, layout, navigation, five text sizes, enlargement and end card remain"
     context: "Mitch explicit direction, 2026-10-10; DEC-040; production release explicitly authorized 2026-10-10"
+
+  - subject: "The History of the Standard Oil Company"
+    predicate: "listed on Unruly Editions catalog as"
+    object: "one title in two volumes, with both approved covers side by side, Available October 2026"
+    context: "Mitch direction 2026-10-11; DEC-041"

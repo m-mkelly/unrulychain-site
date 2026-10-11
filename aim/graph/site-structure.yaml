@@ -191,3 +191,8 @@ triples:
     predicate: "has"
     object: "an Authors page profile linking to Cabin Pressure Ask on Substack and The Prince"
     context: "Mitch direction 2026-10-11; DEC-042"
+
+  - subject: "Amanda Kelly Authors profile"
+    predicate: "includes"
+    object: "Mitch's approved two-paragraph biography and italic Flight Attendant Who Started Reading the Research subtitle; Prince credit and Cabin Pressure Ask links retained"
+    context: "Mitch direction 2026-10-11; DEC-043"

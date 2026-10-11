@@ -364,3 +364,81 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Production authorization (2026-10-10):** Mitch explicitly instructed: “Approved. Deploy. Sea cucumber.” This authorizes squash-merging PR #22 and its automatic Cloudflare Pages production deployment. This release record changes only aim documentation after the approved preview; the reviewed reader HTML, CSS and JavaScript are unchanged. Live deployment identifiers and verification are recorded in the PR release record and Picard backup directory after deployment.
 
 **Reader context:** Mitch notes that Amazon's sample also includes Chapters 1 through 4. The on-site excerpt is an invitation to read, not an exclusive sample. No claim of exclusivity is added.
+
+
+## DEC-041: Tarbell paired-volume Unruly Editions catalog preview (2026-10-11)
+
+**Direction:** Display The History of the Standard Oil Company as one title in two volumes on /editions/. Show the two independently approved final covers side by side, with one title, byline, shared description, and the release status “Available October 2026”. Use a full-width featured entry while leaving the remaining single-title cards untouched.
+
+**Implementation:** Replace only the first Tarbell catalog card in editions/index.html; add a page-scoped responsive stylesheet assets/tarbell-pair.css and two 800x1200 web-ready JPEG derivatives made from the approved full Volume I and Volume II covers. Rename the collection-section heading from “In preparation” to “The collection”. Existing title details page, Books catalog, footer and other edition entries are unchanged.
+
+**State:** Feature-branch preview only. No production merge or deployment authorized. Existing production main baseline a31d60d12cf4983c806cf9f1215e4174b5561164. Discarding the branch returns to the prior state.
+
+
+## DEC-042: Complete Tarbell two-volume listings, add The Prince and editor (2026-10-11)
+
+**Direction:** Mitch rejected the incomplete PR #23 as not approved: update the Standard Oil title page; audit the entire site for catalog impacts; add The Prince to complete the odd remaining Unruly Editions grid card, using the approved complete cover unchanged; give The Prince a dedicated title page and an Amanda Kelly editor bio on the Authors page with links to Cabin Pressure Ask and About.
+
+**Scope:** On /editions/ retain the full-width paired Tarbell entry and add The Prince to the sixth ordinary collection slot. On /books/ replace the single Tarbell card with separate Volume I and II cards and add The Prince. On /editions/standard-oil/ show both approved covers and volume entries; replace the old single-cover and In preparation status with Available October 2026. Create /editions/the-prince/ with Amanda Kelly as editor, In Development, with publication details unannounced. Add Amanda Kelly to the /author.html roster. Add the route to sitemap.xml. All changes are in PR #23 preview branch, unapproved for release.
+
+**Amanda bio verification:** User confirmed Amanda’s editor credit, airline flight-attendant work and Substack URLs. Her Substack About page could not be retrieved through the available web tools, so the bio contains only these confirmed details without inferred background.
+
+**Artwork provenance:** Prince approved complete-cover original SHA-256 53c41c982e3dddc59f7a66e6c13acee16f60c43fc489b53b47df9df3da42dae7 (1024×1536 PNG). The site serves a faithful 800×1200 JPEG derivative (SHA-256 9272e61818029b84163120af30c1c6fd2aef53af4a06f84bd41b6af98cb8b96c), without redrawing the border, logo or cover artwork.
+
+**State:** Preview only. Production remains at main until an explicit separately authorized merge. Rollback before approval is closing PR #23 and deleting its branch; no published site files have changed.
+
+**Preview audit correction:** Removed a stale stylesheet reference inherited from the Moreau template on The Prince title page; all Prince styling uses the existing shared CSS. The paired Tarbell catalog covers now link directly to their respective volume anchors on the shared title page.
+
+
+## DEC-043: Amanda Kelly biography revision (2026-10-11)
+
+**Direction:** Mitch approved the other pages in PR #23's preview and requested replacing Amanda Kelly's brief author profile with the exact supplied two-paragraph biography and italic subtitle, "The Flight Attendant Who Started Reading the Research."
+
+**Scope:** Only the Amanda Kelly author profile on author.html changes. Both biography paragraphs are verbatim from Mitch. Her linked editor credit for The Prince and both Cabin Pressure Ask Substack links remain. The requested co-founder statement is placed in the Authors biography, consistent with the site rule that M&M Kelly LLC may appear only in the author bio. All other pages and site components remain as previously previewed.
+
+**Status:** Feature-branch preview only, awaiting review. Production remains unchanged. Discarding the branch restores the prior state.
+
+
+## DEC-044: Amanda Kelly portrait and Substack name (2026-10-11)
+
+**Direction:** Use the user-supplied Amanda Kelly headshot as a grayscale photograph on the Authors page, and display her Substack's correct publication title “Cabin Pressure” instead of “Cabin Pressure Ask.” Preserve the existing Substack URL https://cabinpressureask.substack.com/ and the previously approved biography, Prince credit and other links.
+
+**Implementation:** Convert the original uploaded 2048x1378 JPEG to faithful grayscale, portrait-cropped and resized to 800x960; no AI regeneration. Original SHA-256: 5ed80f1486b33f34c10f5cb0b35aa31bc72d48e4d41bd00ff30d040c8072b848. Published web asset SHA-256: 2a41dd472bc42e21990b23923aa448ebe2af62541f960343269342587109e00d. Asset path assets/amanda-kelly-bw.jpg. Amanda's profile uses the site's pre-existing author-layout and author-photo responsive classes, matching the established first author listing. Change the visible text of the existing Cabin Pressure link only.
+
+**State:** Preview branch PR #23, no main merge or production release authorized. Other pages unchanged.
+
+
+## DEC-045: Correct distorted Amanda Kelly portrait and biography width (2026-10-11)
+
+**Defect:** The approved 800 × 960 grayscale photograph was rendered 200 × 960 on desktop and 160 × 960 on mobile because HTML's height=960 presentation hint was not overridden when the stylesheet narrowed its width. The result was a distorted face and excess whitespace. The fixed-height image was confirmed by Chromium before the change. Text could also exceed its grid track when the 1fr track used automatic minimum sizing.
+
+**Fix:** In shared author layout CSS, explicitly specify height:auto and max-width:100% on .author-photo, use a minmax(0,1fr) second grid track, and min-width:0 on the author text. Retain the established 200px desktop and 160px mobile photo widths; do not alter Amanda's photo, her approved biography, Substack links, other author photos, or the earlier accepted page changes. Version the Authors page stylesheet URL so browsers request the corrected CSS.
+
+**Verification:** Chromium before/after reproduction with the exact 800 × 960 grayscale photo and author layout at 320, 390, 800, 890, and 1440 CSS pixels. Before: rendered photo height 960px at every size. After: rendered photo is 200 × 240px desktop and 160 × 192px mobile, the text remains inside its grid column, and document scrollWidth matches viewport width at every tested size. Inspection of local rendered desktop and mobile screenshots confirms undistorted proportions and wrapped paragraphs.
+
+**Deployment state:** PR #23 preview only. No production deployment or merge authorized; the prior site remains on main.
+
+
+## DEC-046: Amanda Kelly educational credential on Authors page (2026-10-11)
+
+**Direction:** Mitch requested one additional sentence in Amanda's existing author biography: “Amanda has a B.A. in Theater Arts from The University of Massachusetts, Boston.”
+
+**Scope:** Add that sentence as its own paragraph after Amanda's two previously approved biographical paragraphs and before her Prince editor credit. Preserve her grayscale portrait, existing typography, links, and all other preview pages unchanged. No production deployment authorized.
+
+
+## DEC-047: Reuse approved paired-cover listing in Books catalog (2026-10-11)
+
+**Direction:** Mitch rejected the Books catalog rendering with two duplicate, oversized full-title Tarbell cards. The approved paired-cover listing on the Unruly Editions page is the established design; reuse it exactly rather than inventing a new compact or grouped design.
+
+**Change:** In `books/index.html` only, replace the two separate Tarbell catalog cards with the exact `tarbell-pair` article copied from `editions/index.html` (one title, both covers side by side, existing author/editor, one availability line, and individual volume links). Load the existing, unchanged `assets/tarbell-pair.css`. Leave the approved Unruly Editions collection layout, The Prince, remaining catalog entries, Standard Oil title page, Amanda Kelly bio and all other pages untouched.
+
+**Status:** PR #23 preview branch only. Production remains unchanged pending Mitch's explicit authorization. Verify the hosted Books catalog and other affected routes before requesting approval.
+
+
+## DEC-048: Correct Tarbell presentation on both catalog pages (2026-10-11)
+
+**Direction:** Mitch rejected the redundant main Books page rendering and the attempted remedy that copied the single paired Unruly Editions feature into the Books catalog. Revert to the original distinct treatment: one combined title showing both covers on /editions/, and two separate volume listings on /books/ without repeating the long title and descriptive text.
+
+**Change:** In /books/, a single shared heading presents the full work title, Ida M. Tarbell, Mitch Kelly's editor credit, and October 2026 release state. Beneath it, two standard catalog cards display each approved cover and a short Volume I / Volume II label, linking to the corresponding volume anchors. These are separate entries, not a duplicated long-title pair or a copied full-width feature. Scoped stylesheet assets/tarbell-books.css controls this grouping. In /editions/, keep the existing combined two-cover Tarbell entry and correct an accidental duplicated “The collection” eyebrow/heading. The Prince remains in the current catalog, no change to its title page, author biography, other books, or production.
+
+**Status:** Review branch PR #23 only, no merge to main or production deployment. Test both catalog pages in desktop and mobile preview before approval.

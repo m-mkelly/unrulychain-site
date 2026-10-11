@@ -1,0 +1,18 @@
+/* Standard Oil title page: independent Volume I and Volume II listings. */
+.tarbell-title-intro{padding:48px 0 32px;border-bottom:1px solid var(--line)}
+.tarbell-title-intro h1{font:900 clamp(46px,5.3vw,80px)/.97 var(--display);text-transform:uppercase;letter-spacing:-.02em;margin:14px 0 22px;max-width:1100px}
+.tarbell-title-intro .edition-deck{max-width:850px}
+.tarbell-title-intro .editor-credit{margin-bottom:20px}
+.tarbell-volume-jumps{display:flex;gap:24px;flex-wrap:wrap;margin-top:22px}
+.tarbell-volumes{padding:34px 0 44px;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+.tarbell-volumes>h2{font:900 clamp(32px,3.4vw,48px)/1 var(--display);text-transform:uppercase;margin:0 0 28px}
+.tarbell-volumes .book-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tarbell-volume-entry{grid-template-columns:minmax(130px,.72fr) minmax(0,1fr);min-width:0;scroll-margin-top:140px}
+.tarbell-volume-entry .catalog-cover{margin:0;min-width:0}
+.tarbell-volume-entry img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}
+.tarbell-volume-copy{min-width:0;overflow-wrap:break-word}
+.tarbell-volume-copy h3{margin-top:14px}
+.tarbell-volume-copy .volume-purchase-note{font:14px/1.5 var(--sans);margin-top:22px}
+@media(max-width:1050px){.tarbell-volume-entry{grid-template-columns:minmax(0,.8fr) minmax(0,1fr)}}
+@media(max-width:800px){.tarbell-title-intro{padding:30px 0 26px}.tarbell-title-intro h1{font-size:clamp(40px,8.5vw,58px)}.tarbell-volumes .book-grid{grid-template-columns:1fr}.tarbell-volume-entry{grid-template-columns:minmax(110px,.7fr) minmax(0,1fr)}.tarbell-volumes{padding:28px 0 32px}.tarbell-volume-entry{scroll-margin-top:105px}}
+@media(max-width:380px){.tarbell-volume-entry{grid-template-columns:1fr}.tarbell-volume-entry .catalog-cover{margin-inline:auto;width:100%;max-width:220px}.tarbell-volume-copy{width:100%}}

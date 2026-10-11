@@ -373,3 +373,16 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Implementation:** Replace only the first Tarbell catalog card in editions/index.html; add a page-scoped responsive stylesheet assets/tarbell-pair.css and two 800x1200 web-ready JPEG derivatives made from the approved full Volume I and Volume II covers. Rename the collection-section heading from “In preparation” to “The collection”. Existing title details page, Books catalog, footer and other edition entries are unchanged.
 
 **State:** Feature-branch preview only. No production merge or deployment authorized. Existing production main baseline a31d60d12cf4983c806cf9f1215e4174b5561164. Discarding the branch returns to the prior state.
+
+
+## DEC-042: Complete Tarbell two-volume listings, add The Prince and editor (2026-10-11)
+
+**Direction:** Mitch rejected the incomplete PR #23 as not approved: update the Standard Oil title page; audit the entire site for catalog impacts; add The Prince to complete the odd remaining Unruly Editions grid card, using the approved complete cover unchanged; give The Prince a dedicated title page and an Amanda Kelly editor bio on the Authors page with links to Cabin Pressure Ask and About.
+
+**Scope:** On /editions/ retain the full-width paired Tarbell entry and add The Prince to the sixth ordinary collection slot. On /books/ replace the single Tarbell card with separate Volume I and II cards and add The Prince. On /editions/standard-oil/ show both approved covers and volume entries; replace the old single-cover and In preparation status with Available October 2026. Create /editions/the-prince/ with Amanda Kelly as editor, In Development, with publication details unannounced. Add Amanda Kelly to the /author.html roster. Add the route to sitemap.xml. All changes are in PR #23 preview branch, unapproved for release.
+
+**Amanda bio verification:** User confirmed Amanda’s editor credit, airline flight-attendant work and Substack URLs. Her Substack About page could not be retrieved through the available web tools, so the bio contains only these confirmed details without inferred background.
+
+**Artwork provenance:** Prince approved complete-cover original SHA-256 53c41c982e3dddc59f7a66e6c13acee16f60c43fc489b53b47df9df3da42dae7 (1024×1536 PNG). The site serves a faithful 800×1200 JPEG derivative (SHA-256 9272e61818029b84163120af30c1c6fd2aef53af4a06f84bd41b6af98cb8b96c), without redrawing the border, logo or cover artwork.
+
+**State:** Preview only. Production remains at main until an explicit separately authorized merge. Rollback before approval is closing PR #23 and deleting its branch; no published site files have changed.

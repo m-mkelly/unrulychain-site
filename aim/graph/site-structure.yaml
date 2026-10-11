@@ -176,3 +176,18 @@ triples:
     predicate: "listed on Unruly Editions catalog as"
     object: "one title in two volumes, with both approved covers side by side, Available October 2026"
     context: "Mitch direction 2026-10-11; DEC-041"
+
+  - subject: "Standard Oil volume details and Books catalog"
+    predicate: "shows"
+    object: "Volume I and Volume II separately, each with its own approved cover and Available October 2026 status; title page presents both volumes together"
+    context: "Mitch direction 2026-10-11; DEC-042"
+
+  - subject: "The Prince by Niccolò Machiavelli"
+    predicate: "has"
+    object: "an In Development title page and individual catalog entries; approved cover and Amanda Kelly editor credit"
+    context: "Mitch direction 2026-10-11; DEC-042"
+
+  - subject: "Amanda Kelly"
+    predicate: "has"
+    object: "an Authors page profile linking to Cabin Pressure Ask on Substack and The Prince"
+    context: "Mitch direction 2026-10-11; DEC-042"

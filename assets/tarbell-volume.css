@@ -1,0 +1,15 @@
+/* Standard Oil volume details only. */
+.tarbell-book-page .edition-hero{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,65px)}
+.tarbell-book-page .edition-plate{max-width:none;padding:22px 24px}
+.tarbell-volume-covers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tarbell-volume-covers a{display:block;min-width:0}
+.tarbell-volume-covers img{display:block;width:100%;height:auto;max-width:none;aspect-ratio:2/3;object-fit:cover;margin:0;box-shadow:8px 10px 15px #0003}
+.tarbell-volume-captions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;text-align:center;font:800 11px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.13em;color:var(--paper);margin-top:16px}
+.tarbell-volumes{padding:48px 0;border-bottom:1px solid var(--line)}
+.tarbell-volumes h2{font:900 clamp(38px,4vw,58px)/.96 var(--display);text-transform:uppercase;margin:12px 0 25px}
+.tarbell-volumes-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.tarbell-volumes-grid article{border-top:2px solid var(--ink);padding:18px 0;scroll-margin-top:130px}
+.tarbell-volumes-grid h3{font:900 32px/.96 var(--display);text-transform:uppercase;margin:0 0 12px}
+.tarbell-volumes-grid p{margin:8px 0;font-size:17px}
+@media(max-width:950px){.tarbell-book-page .edition-hero{grid-template-columns:1fr;gap:28px}.tarbell-book-page .edition-plate{max-width:640px;width:100%;margin:auto}.tarbell-book-page .edition-hero h1{font-size:clamp(46px,8vw,72px)}}
+@media(max-width:560px){.tarbell-book-page .edition-plate{padding:16px}.tarbell-volume-covers,.tarbell-volume-captions{gap:11px}.tarbell-volume-captions{font-size:10px}.tarbell-volumes-grid{grid-template-columns:1fr;gap:8px}.tarbell-volumes{padding:32px 0}.tarbell-book-page .edition-hero h1{font-size:clamp(40px,10vw,54px)}}

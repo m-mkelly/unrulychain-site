@@ -78,3 +78,10 @@ updated: 2026-10-10
 **Observation:** The final published EPUB identifies the precise Chapter 1 text and formatting independently of earlier manuscript and introduction-reader sources.
 
 **Rule:** Hash-verify the release EPUB, extract the requested chapter directly, and compare every text block with the rendered reader. Preserve legacy reader fragments when changing excerpt content so existing links keep working. Use the site's established Cloudflare Pages preview process.
+
+
+## LES-012: Check the actual hosting provider before handing back a preview (2026-10-11)
+
+**Observation:** A previous Unruly Chain design response referred to Netlify and returned a standalone HTML file instead of the required hosted preview. Unruly Chain uses Cloudflare Pages, distinct from the M&M Kelly website.
+
+**Rule:** For every Unruly Chain website change, work on a feature branch, use the Cloudflare Pages preview workflow, check the preview build status and contents, provide the hosted preview link, and never offer a local HTML file as a replacement. Never change main without the required same-turn authorization.

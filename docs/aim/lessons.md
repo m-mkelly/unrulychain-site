@@ -85,3 +85,10 @@ updated: 2026-10-10
 **Observation:** A previous Unruly Chain design response referred to Netlify and returned a standalone HTML file instead of the required hosted preview. Unruly Chain uses Cloudflare Pages, distinct from the M&M Kelly website.
 
 **Rule:** For every Unruly Chain website change, work on a feature branch, use the Cloudflare Pages preview workflow, check the preview build status and contents, provide the hosted preview link, and never offer a local HTML file as a replacement. Never change main without the required same-turn authorization.
+
+
+## LES-013: HTML image dimensions must not become fixed layout heights (2026-10-11)
+
+**Incident:** Amanda's web headshot has intrinsic dimensions 800 × 960 and matching width/height HTML attributes. The existing .author-photo selector changed its width but did not set height:auto. In Chromium, the photo computed to 200 × 960 on desktop and 160 × 960 on mobile, producing a severe vertical stretch and large blank section. The accompanying 1fr grid track lacked minmax(0,1fr) protection for constrained text.
+
+**Rule:** For responsive images with HTML dimensions, explicitly set width according to the layout and height:auto. Constrain responsive grid text tracks with minmax(0,1fr) and min-width:0 on the text child. Verify browser-computed width, height, and horizontal overflow across desktop and mobile before supplying a hosted preview.

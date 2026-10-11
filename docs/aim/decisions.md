@@ -406,3 +406,14 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Implementation:** Convert the original uploaded 2048x1378 JPEG to faithful grayscale, portrait-cropped and resized to 800x960; no AI regeneration. Original SHA-256: 5ed80f1486b33f34c10f5cb0b35aa31bc72d48e4d41bd00ff30d040c8072b848. Published web asset SHA-256: 2a41dd472bc42e21990b23923aa448ebe2af62541f960343269342587109e00d. Asset path assets/amanda-kelly-bw.jpg. Amanda's profile uses the site's pre-existing author-layout and author-photo responsive classes, matching the established first author listing. Change the visible text of the existing Cabin Pressure link only.
 
 **State:** Preview branch PR #23, no main merge or production release authorized. Other pages unchanged.
+
+
+## DEC-045: Correct distorted Amanda Kelly portrait and biography width (2026-10-11)
+
+**Defect:** The approved 800 × 960 grayscale photograph was rendered 200 × 960 on desktop and 160 × 960 on mobile because HTML's height=960 presentation hint was not overridden when the stylesheet narrowed its width. The result was a distorted face and excess whitespace. The fixed-height image was confirmed by Chromium before the change. Text could also exceed its grid track when the 1fr track used automatic minimum sizing.
+
+**Fix:** In shared author layout CSS, explicitly specify height:auto and max-width:100% on .author-photo, use a minmax(0,1fr) second grid track, and min-width:0 on the author text. Retain the established 200px desktop and 160px mobile photo widths; do not alter Amanda's photo, her approved biography, Substack links, other author photos, or the earlier accepted page changes. Version the Authors page stylesheet URL so browsers request the corrected CSS.
+
+**Verification:** Chromium before/after reproduction with the exact 800 × 960 grayscale photo and author layout at 320, 390, 800, 890, and 1440 CSS pixels. Before: rendered photo height 960px at every size. After: rendered photo is 200 × 240px desktop and 160 × 192px mobile, the text remains inside its grid column, and document scrollWidth matches viewport width at every tested size. Inspection of local rendered desktop and mobile screenshots confirms undistorted proportions and wrapped paragraphs.
+
+**Deployment state:** PR #23 preview only. No production deployment or merge authorized; the prior site remains on main.

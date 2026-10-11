@@ -388,3 +388,12 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **State:** Preview only. Production remains at main until an explicit separately authorized merge. Rollback before approval is closing PR #23 and deleting its branch; no published site files have changed.
 
 **Preview audit correction:** Removed a stale stylesheet reference inherited from the Moreau template on The Prince title page; all Prince styling uses the existing shared CSS. The paired Tarbell catalog covers now link directly to their respective volume anchors on the shared title page.
+
+
+## DEC-043: Amanda Kelly biography revision (2026-10-11)
+
+**Direction:** Mitch approved the other pages in PR #23's preview and requested replacing Amanda Kelly's brief author profile with the exact supplied two-paragraph biography and italic subtitle, "The Flight Attendant Who Started Reading the Research."
+
+**Scope:** Only the Amanda Kelly author profile on author.html changes. Both biography paragraphs are verbatim from Mitch. Her linked editor credit for The Prince and both Cabin Pressure Ask Substack links remain. The requested co-founder statement is placed in the Authors biography, consistent with the site rule that M&M Kelly LLC may appear only in the author bio. All other pages and site components remain as previously previewed.
+
+**Status:** Feature-branch preview only, awaiting review. Production remains unchanged. Discarding the branch restores the prior state.

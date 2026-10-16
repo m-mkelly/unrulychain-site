@@ -226,3 +226,18 @@ triples:
     predicate: "previews"
     object: "Dallas Peters as cover artist after David E. Norman, with original Slack portrait displayed grayscale, simple cover/animation biography and Dallas's website; branch review only"
     context: "Mitch 2026-10-16 requested shareable approval preview; docs/handoffs/handoff-chatgpt-unrulychain-dallas-authors-20261016.md"
+
+  - subject: "Daedalus; or, Science and the Future"
+    predicate: "announced for"
+    object: "November 2026; editor and annotator David E. Norman (DEN); historic author J. B. S. Haldane"
+    context: "Mitch explicit decision 2026-10-16; combined preview on existing Dallas branch"
+
+  - subject: "The History of the Standard Oil Company"
+    predicate: "announced for"
+    object: "October 2026, both volumes; editor and annotator Mitch Kelly"
+    context: "Mitch reaffirmed 2026-10-16; dates already present on both catalogs and detail page"
+
+  - subject: "Unruly Chain website review"
+    predicate: "uses"
+    object: "one cumulative preview branch feat/dallas-peters-author-preview-20261016 for Dallas profile, Daedalus editor reassignment and November announcement, Standard Oil October announcement"
+    context: "Mitch explicitly rejected disconnected previews 2026-10-16"

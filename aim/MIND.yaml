@@ -1,7 +1,7 @@
 name: unrulychain-site
 version: 1
 bundle_format: "0.1"
-updated: "2026-10-11"
+updated: "2026-10-16"
 description: "Unruly Chain publishing imprint website (unrulychain.com). Static HTML/CSS/JS, Cloudflare Pages, no framework, no build step."
 
 summoning_protocol:

@@ -442,3 +442,14 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Change:** In /books/, a single shared heading presents the full work title, Ida M. Tarbell, Mitch Kelly's editor credit, and October 2026 release state. Beneath it, two standard catalog cards display each approved cover and a short Volume I / Volume II label, linking to the corresponding volume anchors. These are separate entries, not a duplicated long-title pair or a copied full-width feature. Scoped stylesheet assets/tarbell-books.css controls this grouping. In /editions/, keep the existing combined two-cover Tarbell entry and correct an accidental duplicated “The collection” eyebrow/heading. The Prince remains in the current catalog, no change to its title page, author biography, other books, or production.
 
 **Status:** Review branch PR #23 only, no merge to main or production deployment. Test both catalog pages in desktop and mobile preview before approval.
+
+
+## DEC-050: Dallas Peters cover-artist profile preview (2026-10-16)
+
+**Direction:** Mitch requested a shareable preview for Dallas Peters to review his photograph, biography and website link before public release. Dallas is credited for the cover art of *Centrifuge* and the forthcoming *Last Old Man* and the *Centrifuge* animation.
+
+**Implementation:** On `author.html` only, insert a distinct "Cover Art & Design" subsection after David E. Norman. Add Dallas's photo (the original 512px Slack PNG, cropped via CSS to the same 5:6 portrait dimensions and displayed grayscale) and a factual short bio with a personal website link. Do not modify the existing author entries, main page heading, navigation, or other pages. CSS changes are scoped to Dallas and the subsection. No AI image generation or image enhancement.
+
+**Approval gates:** The preview is specifically for Dallas to approve the biographical copy, image, and preferred external link. Mitch reviews the hosted preview and separately authorizes any production release; this review is not authorization to merge. Any Dallas-requested copy/photo/link changes remain in the same review branch until approved.
+
+**State:** Preview branch only, production unchanged.

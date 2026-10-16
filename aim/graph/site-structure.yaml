@@ -2,7 +2,7 @@ meta:
   type: aim-domain
   app: unrulychain-site
   domain: site-structure
-  updated: 2026-10-11
+  updated: 2026-10-16
 
 triples:
   - subject: "tech stack"
@@ -221,3 +221,8 @@ triples:
     predicate: "uses"
     object: "one shared Tarbell title/date/editor header and two separate concise Volume I and Volume II cards with individual covers and links; no duplicated long titles"
     context: "Mitch direction 2026-10-11; DEC-048"
+
+  - subject: "Daedalus; or, Science and the Future"
+    predicate: "editor and annotator"
+    object: "David E. Norman (internal shorthand DEN), replacing Mitch Kelly; J. B. S. Haldane remains original author"
+    context: "Mitch explicit decision, 2026-10-16; Daedalus website review branch"

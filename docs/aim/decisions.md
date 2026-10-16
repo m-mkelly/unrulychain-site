@@ -442,3 +442,12 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Change:** In /books/, a single shared heading presents the full work title, Ida M. Tarbell, Mitch Kelly's editor credit, and October 2026 release state. Beneath it, two standard catalog cards display each approved cover and a short Volume I / Volume II label, linking to the corresponding volume anchors. These are separate entries, not a duplicated long-title pair or a copied full-width feature. Scoped stylesheet assets/tarbell-books.css controls this grouping. In /editions/, keep the existing combined two-cover Tarbell entry and correct an accidental duplicated “The collection” eyebrow/heading. The Prince remains in the current catalog, no change to its title page, author biography, other books, or production.
 
 **Status:** Review branch PR #23 only, no merge to main or production deployment. Test both catalog pages in desktop and mobile preview before approval.
+
+
+## DEC-050: Daedalus editor reassigned to David E. Norman (2026-10-16)
+
+**Direction:** Mitch reassigned editing and annotation of *Daedalus; or, Science and the Future* to David E. Norman, internally abbreviated DEN. J. B. S. Haldane remains the original author. Public credits use David E. Norman, never the shorthand.
+
+**Website changes:** Replace Daedalus editorial attribution only, in the Books catalog, Unruly Editions catalog, Daedalus detail page and rendered cover SVG credit, plus schema.org Book editor metadata. Link Daedalus from David E. Norman's existing Authors profile while preserving the fixed original biography. The approved illustration and site cover bitmap are byte-identical; no regeneration. The corrected 1024-by-1536 final cover review PNG mechanically adds only "Edited and Annotated by David E. Norman" in the established footer credit position, preserving all other original pixels.
+
+**Approval:** Separate Daedalus PR and preview. Dallas Peters review PR is not altered. No production merge authorized.

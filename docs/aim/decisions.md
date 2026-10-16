@@ -450,6 +450,8 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 
 **Implementation:** On `author.html` only, insert a distinct "Cover Art & Design" subsection after David E. Norman. Add Dallas's photo (the original 512px Slack PNG, cropped via CSS to the same 5:6 portrait dimensions and displayed grayscale) and a factual short bio with a personal website link. Do not modify the existing author entries, main page heading, navigation, or other pages. CSS changes are scoped to Dallas and the subsection. No AI image generation or image enhancement.
 
+**Markup correction:** Validation identified an inherited missing closing `</div>` after Mitch Kelly's entry in the main-branch source. The preview closes that container so each author and contributor profile is a proper sibling. All existing visible biographies, titles, links and portrait assets remain unchanged.
+
 **Approval gates:** The preview is specifically for Dallas to approve the biographical copy, image, and preferred external link. Mitch reviews the hosted preview and separately authorizes any production release; this review is not authorization to merge. Any Dallas-requested copy/photo/link changes remain in the same review branch until approved.
 
 **State:** Preview branch only, production unchanged.

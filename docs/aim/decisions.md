@@ -442,3 +442,27 @@ Mitch rejected the first hosted preview because the rendered preview did not con
 **Change:** In /books/, a single shared heading presents the full work title, Ida M. Tarbell, Mitch Kelly's editor credit, and October 2026 release state. Beneath it, two standard catalog cards display each approved cover and a short Volume I / Volume II label, linking to the corresponding volume anchors. These are separate entries, not a duplicated long-title pair or a copied full-width feature. Scoped stylesheet assets/tarbell-books.css controls this grouping. In /editions/, keep the existing combined two-cover Tarbell entry and correct an accidental duplicated “The collection” eyebrow/heading. The Prince remains in the current catalog, no change to its title page, author biography, other books, or production.
 
 **Status:** Review branch PR #23 only, no merge to main or production deployment. Test both catalog pages in desktop and mobile preview before approval.
+
+
+## DEC-050: Dallas Peters cover-artist profile preview (2026-10-16)
+
+**Direction:** Mitch requested a shareable preview for Dallas Peters to review his photograph, biography and website link before public release. Dallas is credited for the cover art of *Centrifuge* and the forthcoming *Last Old Man* and the *Centrifuge* animation.
+
+**Implementation:** On `author.html` only, insert a distinct "Cover Art & Design" subsection after David E. Norman. Add Dallas's photo (the original 512px Slack PNG, cropped via CSS to the same 5:6 portrait dimensions and displayed grayscale) and a factual short bio with a personal website link. Do not modify the existing author entries, main page heading, navigation, or other pages. CSS changes are scoped to Dallas and the subsection. No AI image generation or image enhancement.
+
+**Markup correction:** Validation identified an inherited missing closing `</div>` after Mitch Kelly's entry in the main-branch source. The preview closes that container so each author and contributor profile is a proper sibling. All existing visible biographies, titles, links and portrait assets remain unchanged.
+
+**Approval gates:** The preview is specifically for Dallas to approve the biographical copy, image, and preferred external link. Mitch reviews the hosted preview and separately authorizes any production release; this review is not authorization to merge. Any Dallas-requested copy/photo/link changes remain in the same review branch until approved.
+
+**State:** Preview branch only, production unchanged.
+
+
+## DEC-051: Consolidated Dallas and Daedalus review and 2026 release months (2026-10-16)
+
+**Direction:** Mitch rejected separate Daedalus and Dallas preview branches. All pending Unruly Chain site changes must appear in the existing Dallas review URL for simultaneous review. Mitch approved the corrected Daedalus cover, and instructed announcement of *Daedalus* for November 2026 and *The History of the Standard Oil Company* for October 2026.
+
+**Implementation:** The existing `feat/dallas-peters-author-preview-20261016` branch (PR #25) is the single cumulative preview. It retains Dallas Peters's photo, grayscale treatment, biographical copy, and website link without changes and adds Daedalus as a linked editing credit to David E. Norman's profile. It imports the Daedalus editor attribution and canonical SVG cover lettering from prior PR #26 unchanged; J. B. S. Haldane remains historical author. Both catalog Daedalus entries and its title page now say `Available November 2026`; the detail page's generic publication announcement becomes a statement that formats and purchase details will be announced. The Standard Oil unified entries in both catalogs and its two-volume book page already say `Available October 2026` and are preserved byte-for-byte outside the Daedalus articles. No other titles, approved art assets, navigation, or site sections are changed.
+
+**Approved image:** The previously approved Daedalus cover with canonical Unruly Edition border/logo and full David E. Norman credit is retained in the persistent Library as `/Daedalus_David_E_Norman_final(1).png`. The website renders the identical established artwork plus native canonical SVG and updated editor text. Print master production remains a separate workflow.
+
+**Preview policy correction:** Independent website updates during an active review should extend the active cumulative preview unless Mitch explicitly requests separate alternatives. Do not strand approved book updates in a different review link while another contributor awaits approval. Production remains unauthorized; Dallas's approval remains outstanding.
